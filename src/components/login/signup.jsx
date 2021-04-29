@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import { signUp } from "../../service/auth_service";
 import styles from "./signup.module.css";
 import SignUpImage from "../../image/tft_sign_up1_size.jpg";
 

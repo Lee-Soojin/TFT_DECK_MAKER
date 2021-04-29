@@ -10,14 +10,14 @@ class AuthService {
   signUp(email, password) {
     return firebaseApp.auth().createUserWithEmailAndPassword(email, password);
   }
+
+  signIn(email, password) {
+    return firebaseApp.auth().signInWithEmailAndPassword(email, password);
+  }
+
+  logout() {
+    return firebaseApp.auth().signOut();
+  }
 }
 
 export default AuthService;
-
-export function signIn(email, password) {
-  return auth().signInWithEmailAndPassword(email, password);
-}
-
-export function logout() {
-  return auth().signOut();
-}

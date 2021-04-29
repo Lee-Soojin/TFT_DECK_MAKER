@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { signIn } from "../../service/auth_service";
 import styles from "./login.module.css";
 import LoginImg from "../../image/tft.png";
 import { SiRiotgames } from "react-icons/si";
@@ -17,15 +16,11 @@ const Login = ({ authService }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSubmit = async (e) => {
+  const onMemberLogin = async (e) => {
     e.preventDefault();
-    if (email !== "" && password !== "") {
-      try {
-        await signIn(email, password);
-      } catch (error) {
-        console.log(error);
-      }
-    }
+    authService
+      .signIn(email, password) //
+      .then(console.log);
   };
 
   const handleChange = (e) => {
@@ -39,7 +34,7 @@ const Login = ({ authService }) => {
 
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
-      handleSubmit();
+      onMemberLogin();
     }
   };
 
@@ -49,7 +44,7 @@ const Login = ({ authService }) => {
         <h1 className={styles.title}>LOGIN</h1>
         <form
           className={styles.form}
-          onSubmit={handleSubmit}
+          onSubmit={onMemberLogin}
           onKeyPress={handleKeyPress}
         >
           <div className={styles.email}>
