@@ -4,6 +4,8 @@ import { signIn } from "../../service/auth_service";
 import styles from "./login.module.css";
 import LoginImg from "../../image/tft.png";
 import { SiRiotgames } from "react-icons/si";
+import { FcGoogle } from "react-icons/fc";
+import { SiGithub } from "react-icons/si";
 
 const Login = ({ authService }) => {
   const onLogin = (event) => {
@@ -72,7 +74,6 @@ const Login = ({ authService }) => {
           </div>
           <button className={styles.BtnLogin} type="submit">
             <SiRiotgames />
-            START
           </button>
         </form>
         <p className={styles.signup_link}>
@@ -84,6 +85,7 @@ const Login = ({ authService }) => {
             className={styles.BtnGoogleLogin}
             onClick={onLogin}
           >
+            <FcGoogle className={styles.icon_google} />
             Google
           </button>
           <button
@@ -91,6 +93,7 @@ const Login = ({ authService }) => {
             className={styles.BtnGithubLogin}
             onClick={onLogin}
           >
+            <SiGithub className={styles.icon_github} />
             Github
           </button>
         </div>
