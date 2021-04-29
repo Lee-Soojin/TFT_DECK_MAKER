@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { signIn } from "../../service/auth_service";
 import styles from "./login.module.css";
 import LoginImg from "../../image/tft.png";
+import { SiRiotgames } from "react-icons/si";
 
 const Login = ({ authService }) => {
   const onLogin = (event) => {
@@ -43,35 +44,38 @@ const Login = ({ authService }) => {
   return (
     <div className={styles.login_container}>
       <div className={styles.login_wrap}>
-        <h1 className={styles.title}>로그인</h1>
+        <h1 className={styles.title}>LOGIN</h1>
         <form
           className={styles.form}
           onSubmit={handleSubmit}
           onKeyPress={handleKeyPress}
         >
-          <div className={styles.input_email}>
+          <div className={styles.email}>
             <input
               type="email"
               placeholder="이메일을 입력하세요"
               name="email"
               value={email}
               onChange={handleChange}
+              className={styles.input_email}
             />
           </div>
-          <div className={styles.input_password}>
+          <div className={styles.password}>
             <input
               type="password"
               placeholder="비밀번호를 입력하세요"
               name="password"
               value={password}
               onChange={handleChange}
+              className={styles.input_password}
             />
           </div>
-          <button className={styles.BtnSignUp} type="submit">
-            로그인
+          <button className={styles.BtnLogin} type="submit">
+            <SiRiotgames />
+            START
           </button>
         </form>
-        <p>
+        <p className={styles.signup_link}>
           회원이 아니신가요? <Link to="/signup">회원가입</Link>
         </p>
         <div className={styles.social_login}>
