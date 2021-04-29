@@ -112,8 +112,10 @@
   margin-bottom: 0;
 }
 
-.input_email::placeholder {
+.input_email::placeholder,
+.input_password::placeholder {
   color: gray;
+  padding-left: 1rem;
 }
 
 .LoginImage {

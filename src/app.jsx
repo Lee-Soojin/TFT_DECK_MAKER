@@ -12,7 +12,10 @@ function App({ authService }) {
       <BrowserRouter>
         <Route exact path="/" component={Start} />
         <Route exact path="/home" component={Home} />
-        <Route path="/signup" component={SignUp} />
+        <Route
+          path="/signup"
+          render={() => <SignUp authService={authService} />}
+        />
         <Route
           path="/login"
           render={() => <Login authService={authService} />}

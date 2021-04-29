@@ -6,13 +6,13 @@ class AuthService {
     const authProvider = new firebase.auth[`${providerName}AuthProvider`]();
     return firebaseApp.auth().signInWithPopup(authProvider);
   }
+
+  signUp(email, password) {
+    return firebaseApp.auth().createUserWithEmailAndPassword(email, password);
+  }
 }
 
 export default AuthService;
-
-export function signUp(email, password) {
-  return auth().createUserWithEmailAndPassword(email, password);
-}
 
 export function signIn(email, password) {
   return auth().signInWithEmailAndPassword(email, password);
