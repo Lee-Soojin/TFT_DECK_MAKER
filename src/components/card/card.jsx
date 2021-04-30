@@ -1,9 +1,11 @@
 import React from "react";
+import Header from "../header/header.jsx";
 
 const Start = (props) => {
   return (
     <>
-      <div>Hello it's start page</div>
+      <Header />
+      <div>Hello it's card page</div>
     </>
   );
 };

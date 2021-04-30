@@ -3,15 +3,15 @@ import styles from "./app.module.css";
 import Home from "./components/home/home";
 import Login from "./components/login/login";
 import SignUp from "./components/login/signup";
-import Start from "./components/start/start";
+import Card from "./components/card/card";
 import "./service/firebase";
 
 function App({ authService }) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
-        <Route exact path="/" component={Start} />
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/card" component={Card} />
         <Route
           path="/signup"
           render={() => <SignUp authService={authService} />}
