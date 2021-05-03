@@ -1,9 +1,42 @@
-.championImage {
-  width: 4.5rem;
-  height: 4.5rem;
+.dropdown_container {
+  position: relative;
 }
 
-.champion {
+.BtnDropdown {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  background: transparent;
+  text-align: center;
+  align-items: center;
+  border: none;
+  transition: all 150ms ease;
+  cursor: pointer;
+}
+
+.BtnDropdown:hover {
+  transform: scale(1.1);
+}
+
+#chamlist {
+  margin-left: 0.7rem;
+}
+
+.cham {
   width: 3rem;
   height: 3rem;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+  margin: 0 0.3rem;
+}
+
+.cham:hover {
+  transform: scale(1.12);
+}
+
+.deck {
+  margin-left: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
