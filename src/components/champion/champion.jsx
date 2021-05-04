@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
-import styles from "./dropdownmenu.module.css";
-import "./drop.css";
+import styles from "./champion.module.css";
+import "./dropdown_menu.css";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 

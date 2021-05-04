@@ -2,7 +2,7 @@
   width: 41rem;
   height: 20rem;
   border-radius: 0.5rem;
-  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.39);
+  box-shadow: 6px 6px 2px 1px rgba(55, 55, 59, 0.2);
 }
 
 .selected_cham {

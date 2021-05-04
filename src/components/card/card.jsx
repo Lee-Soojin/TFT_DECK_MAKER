@@ -1,5 +1,6 @@
 import React from "react";
-import DropdownMenu from "../dropdownmenu/dropdownmenu.jsx";
+import DropdownMenu from "../champion/champion.jsx";
+import Deck from "../deck/deck";
 import Header from "../header/header.jsx";
 import styles from "./card.module.css";
 
@@ -8,6 +9,7 @@ const Start = (props) => {
     <>
       <Header />
       <section className={styles.card}>
+        <Deck />
         <div className={styles.selected_cham}>
           <DropdownMenu />
           <DropdownMenu />
