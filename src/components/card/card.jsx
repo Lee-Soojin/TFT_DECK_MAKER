@@ -8,7 +8,18 @@ const Start = (props) => {
     <>
       <Header />
       <section className={styles.card}>
-        <DropdownMenu />
+        <div className={styles.selected_cham}>
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+          <DropdownMenu />
+        </div>
       </section>
     </>
   );
