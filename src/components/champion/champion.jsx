@@ -1,14 +1,30 @@
 import React, { useRef, useState } from "react";
+import Firebase from "firebase";
 import styles from "./champion.module.css";
 import "./dropdown_menu.css";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
-const DropdownMenu = (props) => {
+const Champion = () => {
   const dropdownRef = useRef(null);
   const [active, setActive] = useState(false);
   const [imgsrc, setImgSrc] = useState("");
   const [imgalt, setImgAlt] = useState("");
+  const [cham, setCham] = useState(null);
+
+  const selectChampion = () => {
+    Firebase.database().ref("/card").set(cham);
+    console.log("Data saved");
+  };
+
+  const getChampion = () => {
+    let ref = Firebase.database().ref("/card");
+    ref.on("value", (snapshot) => {
+      const state = snapshot.val();
+      setCham(state);
+    });
+    console.log("Data retrieved");
+  };
 
   const onClick = () => setActive(!active);
 
@@ -898,4 +914,4 @@ const DropdownMenu = (props) => {
   );
 };
 
-export default DropdownMenu;
+export default Champion;
