@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import styles from "./login.module.css";
 import LoginImg from "../../image/tft.png";
 import { SiRiotgames } from "react-icons/si";
@@ -7,11 +7,25 @@ import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
 
 const Login = ({ authService }) => {
+  const history = useHistory();
+  const gotoMaker = (userId) => {
+    history.push({
+      pathname: "/card",
+      state: { id: userId },
+    });
+  };
+
   const onLogin = (event) => {
     authService
       .login(event.currentTarget.textContent) //
-      .then(console.log);
+      .then((data) => gotoMaker(data.user.uid));
   };
+
+  useEffect(() => {
+    authService.onAuthChange((user) => {
+      user && gotoMaker(user.uid);
+    });
+  });
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

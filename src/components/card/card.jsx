@@ -1,40 +1,29 @@
 import React from "react";
-import CardName from "../cardName/cardname.jsx";
-import Champion from "../champion/champion.jsx";
-import Deck from "../deck/deck";
-import Header from "../header/header.jsx";
-import Item from "../item/item.jsx";
 import styles from "./card.module.css";
+import Header from "../header/header";
+import CardMaker from "../card_maker/card_maker";
+import Footer from "../footer/footer";
+import CardContainer from "../card_container/card_container";
 
-const Start = (props) => {
+const card = (props) => {
   return (
-    <>
-      <Header />
-      <section className={styles.card}>
-        <div className={styles.name}>
-          <CardName className={styles.name} />
+    <div className={styles.card}>
+      <div className={styles.header}>
+        <Header />
+      </div>
+      <div className={styles.card_board}>
+        <div className={styles.card_maker}>
+          <CardMaker />
         </div>
-        <Deck />
-        <h3 className={styles.cham_title}>챔피언</h3>
-        <div className={styles.selected_cham}>
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
+        <div className={styles.card_container}>
+          <CardContainer />
         </div>
-        <div className={styles.selected_item}>
-          <h3 className={styles.item_title}>아이템</h3>
-          <Item />
-        </div>
-      </section>
-    </>
+      </div>
+      <div className={styles.footer}>
+        <Footer />
+      </div>
+    </div>
   );
 };
 
-export default Start;
+export default card;

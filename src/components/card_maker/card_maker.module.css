@@ -1,0 +1,46 @@
+.card_maker {
+  height: 100%;
+}
+
+.card {
+  width: 41rem;
+  height: 20rem;
+  border-radius: 0.5rem;
+  box-shadow: 6px 6px 2px 1px rgba(55, 55, 59, 0.2);
+}
+
+.card_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0.3rem;
+}
+
+.selected_cham {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 0.5rem;
+  height: 3rem;
+  align-items: center;
+}
+
+.cham_title {
+  position: relative;
+  display: flex;
+  font-size: 1rem;
+  margin: 0.3rem 0.5rem;
+}
+
+.item_title {
+  position: relative;
+  display: flex;
+  font-size: 1rem;
+  margin: 1rem 0.5rem;
+}

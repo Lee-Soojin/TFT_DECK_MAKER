@@ -1,0 +1,16 @@
+.cardname_form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cardname_input {
+  width: 12rem;
+  height: 1.5rem;
+}
+
+.BtnInsert {
+  width: 3rem;
+  height: 1.5rem;
+  margin-left: 0.5rem;
+}

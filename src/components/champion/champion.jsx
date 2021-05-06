@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Firebase from "firebase";
 import styles from "./champion.module.css";
 import "./dropdown_menu.css";
@@ -25,6 +25,15 @@ const Champion = () => {
     });
     console.log("Data retrieved");
   };
+
+  useEffect((prevState) => {
+    getChampion();
+    if (prevState !== cham) {
+      selectChampion();
+    }
+  });
+
+  const handleSubmit = () => {};
 
   const onClick = () => setActive(!active);
 
