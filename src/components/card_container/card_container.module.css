@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "lol_regular";
+  src: url(../../font/lol_regular.ttf);
+}
+
+.title {
+  font-family: "lol_regular";
+  font-size: 1.5rem;
+  text-align: center;
+}

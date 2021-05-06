@@ -14,3 +14,14 @@
   width: 7rem;
   height: 1.2rem;
 }
+
+@media screen and (max-width: 80rem) {
+  .theme {
+    flex-direction: column;
+    margin: 0.3rem 0;
+  }
+
+  .title {
+    margin-bottom: 0.5rem;
+  }
+}

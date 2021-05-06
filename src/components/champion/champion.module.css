@@ -1,5 +1,6 @@
 .dropdown_container {
   position: relative;
+  align-items: center;
 }
 
 .ChamContainer {
@@ -20,7 +21,6 @@
   border: none;
   transition: all 150ms ease;
   cursor: pointer;
-
   color: gray;
 }
 
@@ -53,4 +53,27 @@
   margin-left: 0.3rem;
   font-size: 0.8rem;
   font-weight: 700;
+}
+
+@media screen and (max-width: 80rem) {
+  .dropdown_container {
+    margin-top: 0;
+    align-items: center;
+  }
+
+  .ChamContainer {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .BtnDropdown {
+    width: 3.3rem;
+    height: 3.3rem;
+  }
+
+  .selectedCham {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
 }

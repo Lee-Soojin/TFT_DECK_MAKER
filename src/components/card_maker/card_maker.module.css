@@ -1,18 +1,51 @@
+@font-face {
+  font-family: "lol_regular";
+  src: url(../../font/lol_regular.ttf);
+}
+
 .card_maker {
   height: 100%;
+  background-color: white;
+  justify-content: center;
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin: 0.5rem;
   width: 41rem;
-  height: 20rem;
+  height: 80%;
   border-radius: 0.5rem;
-  box-shadow: 6px 6px 2px 1px rgba(55, 55, 59, 0.2);
+  box-shadow: 12px 12px 6px 1px rgba(13, 12, 14, 0.2);
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "lol_regular";
+  margin: 0;
+  margin: 0.5rem 0;
+}
+
+.select_part {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 30%;
 }
 
 .card_top {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  height: 10rem;
+  width: 90%;
+  align-items: center;
+  border-bottom: 1px solid gray;
 }
 
 .name {
@@ -22,20 +55,48 @@
   margin: 0.3rem;
 }
 
-.selected_cham {
+.deck {
   display: flex;
+  flex-direction: row;
+  height: 10rem;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+.champion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 40%;
+}
+
+.selected_cham {
+  flex-wrap: wrap;
+  display: flex;
+  width: 60%;
   flex-direction: row;
   justify-content: center;
   margin-left: 0.5rem;
-  height: 3rem;
+  height: 15rem;
   align-items: center;
 }
 
 .cham_title {
   position: relative;
   display: flex;
+  justify-content: left;
   font-size: 1rem;
   margin: 0.3rem 0.5rem;
+}
+
+.selected_item {
+  height: 10rem;
+  width: 90%;
+  border-top: 1px solid gray;
 }
 
 .item_title {
@@ -43,4 +104,70 @@
   display: flex;
   font-size: 1rem;
   margin: 1rem 0.5rem;
+}
+
+@media screen and (max-width: 80rem) {
+  .card_maker {
+    width: 100%;
+  }
+  .card {
+    flex-direction: row;
+    width: 90%;
+    height: 90%;
+    justify-content: center;
+    border: 1px solid black;
+    align-items: center;
+  }
+
+  .select_part {
+    height: 90%;
+    align-items: center;
+    width: 30%;
+    border-right: 1px solid gray;
+  }
+
+  .card_top {
+    flex-direction: column;
+    width: 30%;
+    border-bottom: none;
+    margin-top: 0.8rem;
+  }
+
+  .name {
+    border-bottom: none;
+    justify-content: flex-start;
+  }
+
+  .deck {
+    border-bottom: none;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+  }
+
+  .champion {
+    height: 90%;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .cham_title {
+    border-bottom: none;
+    font-size: 0.8rem;
+    margin: 0;
+    position: relative;
+  }
+
+  .selected_cham {
+    border-bottom: none;
+    height: 100%;
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .selected_item {
+    border-top: none;
+    height: 100%;
+  }
 }

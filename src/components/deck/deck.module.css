@@ -23,3 +23,17 @@
   width: 7rem;
   height: 1.5rem;
 }
+
+@media screen and (max-width: 80rem) {
+  .deck_container {
+    flex-direction: column;
+  }
+
+  .deck1,
+  .deck2 {
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

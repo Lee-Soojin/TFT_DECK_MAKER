@@ -2,13 +2,17 @@ import React, { useRef, useState } from "react";
 import styles from "./cardname.module.css";
 
 const CardName = (props) => {
-  const NameRef = useRef("");
+  const NameRef = useRef(null);
   const [name, setName] = useState("");
-  const handleClick = (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-  };
-  const handleChange = () => {
-    console.log("changed");
+    let name = NameRef.value;
+    if (name) {
+      setName(name);
+      console.log(name);
+    }
+    name = "";
   };
 
   return (
@@ -16,15 +20,15 @@ const CardName = (props) => {
       <form
         className={styles.cardname_form}
         ref={NameRef}
-        onChange={handleChange}
+        onChange={handleSubmit}
       >
         <input
           className={styles.cardname_input}
           type="text"
-          value={name}
+          ref={NameRef}
           placeholder="카드 이름을 입력해주세요"
         />
-        <button className={styles.BtnInsert} onClick={handleClick}>
+        <button className={styles.BtnInsert} type="submit">
           확인
         </button>
       </form>
