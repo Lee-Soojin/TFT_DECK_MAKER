@@ -3,8 +3,118 @@
   src: url(../../font/lol_regular.ttf);
 }
 
+@font-face {
+  font-family: "nanum_regular";
+  src: url(../../font/NanumGothic-Regular.ttf);
+}
+
+@font-face {
+  font-family: "nanum_bold";
+  src: url(../../font/NanumGothic-Bold.ttf);
+}
+
+.content {
+  width: 60%;
+  margin: 0;
+  border-right: 1px solid lightgray;
+}
+
+.name {
+  font-family: "nanum_bold";
+  text-align: left;
+  margin: 0.5rem;
+}
+
+.deck1,
+.deck2 {
+  font-family: "nanum_regular";
+  text-align: center;
+}
+
+.deck1 {
+  color: gold;
+}
+
+.deck2 {
+  color: silver;
+}
+
 .title {
   font-family: "lol_regular";
   font-size: 1.5rem;
   text-align: center;
+}
+
+.selected_cham {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 0.1rem;
+}
+
+.champion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.champion_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 17rem;
+  border: 1px solid rgba(0, 0, 0, 0.144);
+  box-shadow: 7px 5px 5px rgba(128, 128, 128, 0.644);
+}
+
+.item_title {
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.item_container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+}
+
+.selected_item {
+  display: flex;
+  flex-direction: row;
+  width: 2rem;
+  height: 2rem;
+  flex-wrap: wrap;
+  margin: 0 0.1rem;
+}
+
+.card_image {
+  display: flex;
+  width: 40%;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image {
+  display: flex;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  align-content: center;
+  justify-content: center;
+  margin-top: 40%;
 }
