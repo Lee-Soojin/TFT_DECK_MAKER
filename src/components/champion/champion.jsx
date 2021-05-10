@@ -5,35 +5,31 @@ import "./dropdown_menu.css";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
-const Champion = () => {
+const Champion = React.forwardRef((props, ref) => {
   const dropdownRef = useRef(null);
   const [active, setActive] = useState(false);
   const [imgsrc, setImgSrc] = useState("");
   const [imgalt, setImgAlt] = useState("");
-  const [cham, setCham] = useState(null);
+  const [champion, setCham] = useState(null);
 
-  const selectChampion = () => {
-    Firebase.database().ref("/card").set(cham);
-    console.log("Data saved");
-  };
+  // const selectChampion = () => {
+  //   Firebase.database().ref("/card").set(champion);
+  // };
 
-  const getChampion = () => {
-    let ref = Firebase.database().ref("/card");
-    ref.on("value", (snapshot) => {
-      const state = snapshot.val();
-      setCham(state);
-    });
-    console.log("Data retrieved");
-  };
+  // const getChampion = () => {
+  //   let ref = Firebase.database().ref("/card");
+  //   ref.on("value", (snapshot) => {
+  //     const state = snapshot.val();
+  //     setCham(state);
+  //   });
+  // };
 
-  useEffect((prevState) => {
-    getChampion();
-    if (prevState !== cham) {
-      selectChampion();
-    }
-  });
-
-  const handleSubmit = () => {};
+  // useEffect((prevState) => {
+  //   getChampion();
+  //   if (prevState !== champion) {
+  //     selectChampion();
+  //   }
+  // });
 
   const onClick = () => setActive(!active);
 
@@ -48,7 +44,7 @@ const Champion = () => {
     <>
       <div className={styles.dropdown_container}>
         <div className={styles.ChamContainer}>
-          <button className={styles.BtnDropdown} onClick={onClick}>
+          <button className={styles.BtnDropdown} onClick={onClick} ref={ref}>
             {imgsrc ? (
               <img src={imgsrc} alt={imgalt} className={styles.selectedCham} />
             ) : (
@@ -921,6 +917,6 @@ const Champion = () => {
       </div>
     </>
   );
-};
+});
 
 export default Champion;

@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "lol_regular";
+  src: url(../../font/Friz\ Quadrata\ Std\ Medium.otf);
+}
+
+.footer {
+  background-color: darkgray;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "lol_regular";
+}

@@ -1,27 +1,23 @@
 import React, { useRef, useState } from "react";
 import styles from "./cardname.module.css";
 
-const CardName = (props) => {
-  const NameRef = useRef(null);
+const CardName = ({ nameRef }) => {
+  const NameRef = useRef(nameRef);
   const [name, setName] = useState("");
-
   const handleSubmit = (e) => {
     e.preventDefault();
     let name = NameRef.value;
     if (name) {
       setName(name);
       console.log(name);
+      console.log(NameRef);
     }
     name = "";
   };
 
   return (
     <>
-      <form
-        className={styles.cardname_form}
-        ref={NameRef}
-        onChange={handleSubmit}
-      >
+      <form className={styles.cardname_form} onChange={handleSubmit}>
         <input
           className={styles.cardname_input}
           type="text"

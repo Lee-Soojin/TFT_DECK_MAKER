@@ -3,7 +3,7 @@ import styles from "./app.module.css";
 import Home from "./components/home/home";
 import Login from "./components/login/login";
 import SignUp from "./components/login/signup";
-import Card from "./components/card/card";
+import Cards from "./components/cards/cards";
 import "./service/firebase";
 
 function App({ authService }) {
@@ -11,7 +11,11 @@ function App({ authService }) {
     <div className={styles.app}>
       <BrowserRouter>
         <Route exact path="/" component={Home} />
-        <Route exact path="/card" component={Card} />
+        <Route
+          exact
+          path="/card"
+          render={() => <Cards authService={authService} />}
+        />
         <Route
           path="/signup"
           render={() => <SignUp authService={authService} />}

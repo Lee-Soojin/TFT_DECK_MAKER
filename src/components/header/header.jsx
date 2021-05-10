@@ -3,7 +3,7 @@ import styles from "./header.module.css";
 import TitleImg from "../../image/header_Title_2.png";
 import { Link } from "react-router-dom";
 
-const Header = (props) => {
+const Header = ({ onLogout }) => {
   return (
     <section className={styles.header}>
       <div className={styles.about}>
@@ -16,6 +16,11 @@ const Header = (props) => {
           <img src={TitleImg} alt="title" />
         </div>
       </div>
+      {true && (
+        <button className={styles.BtnLogout} onClick={onLogout}>
+          Logout
+        </button>
+      )}
     </section>
   );
 };

@@ -2,7 +2,7 @@ import styles from "./deck.module.css";
 
 import React from "react";
 
-const Deck = (props) => {
+const Deck = () => {
   return (
     <section className={styles.deck_container}>
       <div className={styles.deck1}>

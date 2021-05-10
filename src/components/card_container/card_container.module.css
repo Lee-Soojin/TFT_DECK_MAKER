@@ -27,7 +27,7 @@
 
 .deck1,
 .deck2 {
-  font-family: "nanum_regular";
+  font-family: "lol_regular";
   text-align: center;
 }
 
@@ -63,6 +63,10 @@
   flex-wrap: wrap;
 }
 
+.cham_title {
+  font-family: "lol_regular";
+}
+
 .card {
   display: flex;
   flex-direction: row;
@@ -76,6 +80,7 @@
   font-size: 1.2rem;
   width: 100%;
   text-align: center;
+  font-family: "lol_regular";
 }
 
 .item {
@@ -117,4 +122,12 @@
   align-content: center;
   justify-content: center;
   margin-top: 40%;
+}
+
+@media screen and (max-width: 80rem) {
+  .card {
+    width: 60%;
+    justify-content: center;
+    margin: 0 auto;
+  }
 }
