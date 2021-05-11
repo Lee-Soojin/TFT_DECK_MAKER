@@ -7,7 +7,8 @@ import CHAMPION_IMAGES from "../../image/index_image.js";
 import "../champion/dropdown_menu.css";
 
 const AddForm = ({ onAdd }) => {
-  const [cham, setCham] = useState(null);
+  const [cham, setCham] = useState([]);
+  const [selectedCham, setSelectedCham] = useState([]);
   const chamOptions = [
     { champion: "Kalista", label: "Kalista" },
     { champion: "Brand", label: "Brand" },
@@ -33,15 +34,15 @@ const AddForm = ({ onAdd }) => {
       deck1: deck1Ref.current.value || "",
       deck1: deck1Ref.current.value || "",
       deck2: deck2Ref.current.value || "",
+      champion: championRef.current.value || "",
       theme: themeRef.current.value || "white",
     };
     formRef.current.reset();
     onAdd(card);
   };
 
-  const handleChange = (cham) => {
-    setCham(cham);
-    console.log(`selected champion:`, cham);
+  const handleChange = (e) => {
+    setSelectedCham(Array.isArray(e) ? e.map((x) => x.value) : []);
   };
 
   return (
@@ -138,7 +139,26 @@ const AddForm = ({ onAdd }) => {
         </div>
       </div>
       <div className={styles.champion}>
-        <Select options={chamOptions} value={cham} onChange={handleChange} />
+        <Select
+          className={styles.select_champion}
+          ref={championRef}
+          options={chamOptions}
+          value={chamOptions.filter((obj) =>
+            selectedCham.includes(obj.champion)
+          )}
+          onChange={handleChange}
+          isMulti
+          isClearable
+          placeholder="Select Champions"
+        />
+        {selectedCham && (
+          <div>
+            <div>
+              <b>Selected Cham: </b>
+              <img src={CHAMPION_IMAGES.selectedCham} alt="cham" />
+            </div>
+          </div>
+        )}
       </div>
       <div className={styles.item}>
         <Item />

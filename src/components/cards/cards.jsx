@@ -11,48 +11,6 @@ import ITEM_IMAGES from "../../image/item";
 const Cards = ({ authService }) => {
   const [cards, setCards] = useState([
     {
-      theme: "white",
-      cham: [
-        CHAMPION_IMAGES.cham_Aatrox,
-        CHAMPION_IMAGES.cham_Aphelios,
-        CHAMPION_IMAGES.cham_Ashe,
-        CHAMPION_IMAGES.cham_Brand,
-        CHAMPION_IMAGES.cham_Darius,
-        CHAMPION_IMAGES.cham_Diana,
-        CHAMPION_IMAGES.cham_Draven,
-        CHAMPION_IMAGES.cham_Garen,
-      ],
-      item: [
-        ITEM_IMAGES.item_Arch,
-        ITEM_IMAGES.item_Armor,
-        ITEM_IMAGES.item_Bow,
-      ],
-      name: "new card",
-      deck1: "coven",
-      deck2: "draconic",
-    },
-    {
-      theme: "black",
-      cham: [
-        CHAMPION_IMAGES.cham_Aatrox,
-        CHAMPION_IMAGES.cham_Aphelios,
-        CHAMPION_IMAGES.cham_Ashe,
-        CHAMPION_IMAGES.cham_Brand,
-        CHAMPION_IMAGES.cham_Darius,
-        CHAMPION_IMAGES.cham_Diana,
-        CHAMPION_IMAGES.cham_Draven,
-        CHAMPION_IMAGES.cham_Garen,
-      ],
-      item: [
-        ITEM_IMAGES.item_Arch,
-        ITEM_IMAGES.item_Armor,
-        ITEM_IMAGES.item_Bow,
-      ],
-      name: "new card",
-      deck1: "coven",
-      deck2: "draconic",
-    },
-    {
       theme: "yellow",
       cham: [
         CHAMPION_IMAGES.cham_Aatrox,
