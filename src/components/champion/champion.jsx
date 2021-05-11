@@ -10,7 +10,7 @@ const Champion = React.forwardRef((props, ref) => {
   const [active, setActive] = useState(false);
   const [imgsrc, setImgSrc] = useState("");
   const [imgalt, setImgAlt] = useState("");
-  const [champion, setCham] = useState(null);
+  const [champion, setCham] = useState([]);
 
   // const selectChampion = () => {
   //   Firebase.database().ref("/card").set(champion);
@@ -38,6 +38,7 @@ const Champion = React.forwardRef((props, ref) => {
     setImgSrc(imgsrc);
     setImgAlt(imgsrc);
     setActive(!active);
+    const selectedCham = champion.push(imgsrc);
   };
 
   return (

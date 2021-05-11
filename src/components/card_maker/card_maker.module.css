@@ -17,9 +17,9 @@
   background-color: white;
   margin: 0.5rem;
   width: 41rem;
-  height: 80%;
   border-radius: 0.5rem;
   box-shadow: 12px 12px 6px 1px rgba(13, 12, 14, 0.2);
+  border: 1px solid lightgray;
   margin: 0 auto;
 }
 

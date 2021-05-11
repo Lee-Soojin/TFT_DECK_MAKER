@@ -14,7 +14,7 @@ const Card = ({ card }) => {
           <p className={styles.deck1}>{deck1}</p>
           <p className={styles.deck2}>{deck2}</p>
         </div>
-        <div className={styles.champion_list}>
+        {/* <div className={styles.champion_list}>
           {cham.map((champion) => (
             <img src={champion} alt="champion" className={styles.champion} />
           ))}
@@ -23,7 +23,7 @@ const Card = ({ card }) => {
           {item.map((item) => (
             <img src={item} alt="item" className={styles.item} />
           ))}
-        </div>
+        </div> */}
       </li>
     </section>
   );

@@ -24,19 +24,17 @@ const CardEditor = ({ card }) => {
           </button>
         </div>
         <div className={styles.theme}>
-          <div className={styles.theme}>
-            <p className={styles.title}>테마 선택</p>
-            <select
-              name="theme"
-              placeholder="Theme"
-              className={styles.theme_select}
-              value={theme}
-            >
-              <option value="black">black</option>
-              <option value="white">white</option>
-              <option value="yellow">yellow</option>
-            </select>
-          </div>
+          <p className={styles.theme_title}>테마 선택</p>
+          <select
+            name="theme"
+            placeholder="Theme"
+            className={styles.theme_select}
+            value={theme}
+          >
+            <option value="black">black</option>
+            <option value="white">white</option>
+            <option value="yellow">yellow</option>
+          </select>
         </div>
         <div className={styles.deck}>
           <div className={styles.deck1}>
@@ -108,16 +106,7 @@ const CardEditor = ({ card }) => {
             </select>
           </div>
         </div>
-        <div className={styles.champion}>
-          <Champion ref={chamRef} />
-          <Champion ref={chamRef} />
-          <Champion ref={chamRef} />
-          <Champion ref={chamRef} />
-          <Champion ref={chamRef} />
-          <Champion ref={chamRef} />
-          <Champion ref={chamRef} />
-          <Champion ref={chamRef} />
-        </div>
+        <div className={styles.champion}>champion</div>
         <div className={styles.item}>
           <Item value={item} />
         </div>

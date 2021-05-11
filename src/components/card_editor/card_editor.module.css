@@ -1,12 +1,149 @@
-.card_name {
-  display: flex;
-  width: 8rem;
-  height: 1.5rem;
-  margin: 0.5rem;
+@font-face {
+  font-family: "nanum_bolde";
+  src: url(../../font/NanumGothic-Bold.ttf);
 }
 
-.BtnNameOk {
-  width: 3rem;
+.form {
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.card_name {
+  display: flex;
+  width: 30%;
+  height: 40%;
+  margin-left: 3rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid gray;
+}
+
+.BtnInsert {
+  display: flex;
+  width: 2.5rem;
   height: 1.3rem;
   margin: 0.3rem;
+  font-size: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardname_input {
+  display: flex;
+  width: 5rem;
+  height: 1.2rem;
+  margin: 0 0.3rem;
+}
+
+.theme {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 30%;
+  margin-left: 3rem;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.theme_title {
+  font-size: 0.8rem;
+  font-family: "nanum_bold";
+}
+
+.theme_select {
+  width: 7rem;
+}
+
+.deck {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+.deck1_title,
+.deck2_title {
+  font-family: "nanum_bold";
+  font-size: 0.8rem;
+}
+
+.champion,
+.item {
+  display: flex;
+}
+
+.BtnDelete {
+  display: flex;
+  width: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 80rem) {
+  .card_name {
+    display: flex;
+    width: 10rem;
+    height: 1.5rem;
+    margin: 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .BtnInsert {
+    display: flex;
+    width: 2.5rem;
+    height: 1.3rem;
+    margin: 0.3rem;
+    font-size: 0.5rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form {
+    width: 30rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.4rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid black;
+  }
+
+  .cardname_input {
+    display: flex;
+    width: 5rem;
+    height: 1.2rem;
+    margin: 0 0.3rem;
+  }
+
+  .theme {
+    margin: 0 0.3rem;
+    width: 100%;
+    align-items: center;
+  }
+
+  .theme_title {
+    font-size: 0.8rem;
+    font-family: "nanum_bold";
+  }
+
+  .theme_select {
+    width: 7rem;
+  }
+
+  .deck1_title,
+  .deck2_title {
+    font-family: "nanum_bold";
+    font-size: 0.8rem;
+  }
 }

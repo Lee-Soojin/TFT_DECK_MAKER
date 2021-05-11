@@ -1,17 +1,27 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import styles from "./addform.module.css";
-import Champion from "../champion/champion.jsx";
-import CardName from "../cardName/cardname.jsx";
-import Deck from "../deck/deck";
+import Select from "react-select";
 import Item from "../item/item.jsx";
+import { AiOutlinePlusSquare } from "react-icons/ai";
+import CHAMPION_IMAGES from "../../image/index_image.js";
+import "../champion/dropdown_menu.css";
 
 const AddForm = ({ onAdd }) => {
+  const [cham, setCham] = useState(null);
+  const chamOptions = [
+    { champion: "Kalista", label: "Kalista" },
+    { champion: "Brand", label: "Brand" },
+    { champion: "Nunu", label: "Nunu" },
+    { champion: "Ryze", label: "Ryze" },
+  ];
+  // ↑champion↑
+
   const formRef = useRef();
   const nameRef = useRef();
   const themeRef = useRef();
   const deck1Ref = useRef();
   const deck2Ref = useRef();
-  const championRef = useRef([]);
+  const championRef = useRef();
   const itemRef = useRef([]);
 
   const onSubmit = (event) => {
@@ -23,12 +33,15 @@ const AddForm = ({ onAdd }) => {
       deck1: deck1Ref.current.value || "",
       deck1: deck1Ref.current.value || "",
       deck2: deck2Ref.current.value || "",
-      champion: championRef.current.value || "",
-      item: itemRef.current.value || "",
       theme: themeRef.current.value || "white",
     };
     formRef.current.reset();
     onAdd(card);
+  };
+
+  const handleChange = (cham) => {
+    setCham(cham);
+    console.log(`selected champion:`, cham);
   };
 
   return (
@@ -125,14 +138,7 @@ const AddForm = ({ onAdd }) => {
         </div>
       </div>
       <div className={styles.champion}>
-        <Champion />
-        <Champion />
-        <Champion />
-        <Champion />
-        <Champion />
-        <Champion />
-        <Champion />
-        <Champion />
+        <Select options={chamOptions} value={cham} onChange={handleChange} />
       </div>
       <div className={styles.item}>
         <Item />
