@@ -13,14 +13,14 @@ const Cards = ({ authService }) => {
     {
       theme: "yellow",
       cham: [
-        CHAMPION_IMAGES.cham_Aatrox,
-        CHAMPION_IMAGES.cham_Aphelios,
-        CHAMPION_IMAGES.cham_Ashe,
-        CHAMPION_IMAGES.cham_Brand,
-        CHAMPION_IMAGES.cham_Darius,
-        CHAMPION_IMAGES.cham_Diana,
-        CHAMPION_IMAGES.cham_Draven,
-        CHAMPION_IMAGES.cham_Garen,
+        "Aatrox",
+        "Aphelios",
+        "Ashe",
+        "Brand",
+        "Darius",
+        "Diana",
+        "Draven",
+        "Garen",
       ],
       item: [
         ITEM_IMAGES.item_Arch,

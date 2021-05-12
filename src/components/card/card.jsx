@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./card.module.css";
+import "../../image/index_image.js";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import ITEM_IMAGES from "../../image/item";
 
@@ -14,9 +15,14 @@ const Card = ({ card }) => {
           <p className={styles.deck2}>{deck2}</p>
         </div>
         <div className={styles.champion_list}>
-          {cham.map((champion) => (
-            <img src={champion} alt="champion" className={styles.champion} />
-          ))}
+          {cham &&
+            cham.map((champion) => (
+              <img
+                src={`../../image/chamImage/${champion}.png`}
+                alt="champion"
+                className={styles.champion}
+              />
+            ))}
         </div>
         {/* <div className={styles.item_list}>
           {item.map((item) => (
