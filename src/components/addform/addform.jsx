@@ -1,19 +1,143 @@
 import React, { useRef, useState } from "react";
 import styles from "./addform.module.css";
-import Select from "react-select";
 import Item from "../item/item.jsx";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import "../champion/dropdown_menu.css";
+import SelectChampion from "../select_champion/select_champion";
 
 const AddForm = ({ onAdd }) => {
   const [cham, setCham] = useState([]);
-  const [selectedCham, setSelectedCham] = useState([]);
   const chamOptions = [
-    { champion: "Kalista", label: "Kalista" },
-    { champion: "Brand", label: "Brand" },
-    { champion: "Nunu", label: "Nunu" },
-    { champion: "Ryze", label: "Ryze" },
+    { value: "Kalista", label: "Kalista" },
+    { value: "Brand", label: "Brand" },
+    { value: "Nunu", label: "Nunu" },
+    { value: "Ryze", label: "Ryze" },
+    { value: "Lissandra", label: "Lissandra" },
+    { value: "Leblanc", label: "Leblanc" },
+    { value: "Morgana", label: "Morgana" },
+    { value: "Gragas", label: "Gragas" },
+    { value: "Khazix", label: "Khazix" },
+    { value: "Soraka", label: "Soraka" },
+    { value: "Nidalee", label: "Nidalee" },
+    { value: "Riven", label: "Riven" },
+    { value: "Karma", label: "Karma" },
+    { value: "Garen", label: "Garen" },
+    { value: "Udyr", label: "Udyr" },
+    { value: "Sett", label: "Sett" },
+    { value: "Ashe", label: "Ashe" },
+    { value: "Zyra", label: "Zyra" },
+    { value: "Heimerdinger", label: "Heimerdinger" },
+    { value: "Trundle", label: "Trundle" },
+    { value: "Pantheon", label: "Pantheon" },
+    { value: "Diana", label: "Diana" },
+    { value: "Mordekaiser", label: "Mordekaiser" },
+    { value: "Kindred", label: "Kindred" },
+    { value: "Warwick", label: "Warwick" },
+    { value: "Vayne", label: "Vayne" },
+    { value: "Hecarim", label: "Hecarim" },
+    { value: "Thresh", label: "Thresh" },
+    { value: "Viktor", label: "Viktor" },
+    { value: "Katarina", label: "Katarina" },
+    { value: "Draven", label: "Draven" },
+    { value: "Ryze", label: "Ryze" },
+    { value: "Viego", label: "Viego" },
+    { value: "Kled", label: "Kled" },
+    { value: "Poppy", label: "Poppy" },
+    { value: "Ziggs", label: "Ziggs" },
+    { value: "Kennen", label: "Kennen" },
+    { value: "Lulu", label: "Lulu" },
+    { value: "Teemo", label: "Teemo" },
+    { value: "Nautilus", label: "Nautilus" },
+    { value: "Jax", label: "Jax" },
+    { value: "Rell", label: "Rell" },
+    { value: "Vladimir", label: "Vladimir" },
+    { value: "Sejuani", label: "Sejuani" },
+    { value: "Leesin", label: "Leesin" },
+    { value: "Morgana", label: "Morgana" },
+    { value: "Yasuo", label: "Yasuo" },
+    { value: "Aphelios", label: "Aphelios" },
+    { value: "Diana", label: "Diana" },
+    { value: "Darius", label: "Darius" },
+    { value: "Aatrox", label: "Aatrox" },
+    { value: "Leona", label: "Leona" },
+    { value: "Syndra", label: "Syndra" },
+    { value: "Varus", label: "Varus" },
+    { value: "Lux", label: "Lux" },
+    { value: "Rell", label: "Rell" },
+    { value: "Velkoz", label: "Velkoz" },
+    { value: "Kayle", label: "Kayle" },
+    { value: "Nocturn", label: "Nocturn" },
+    { value: "Ivern", label: "Ivern" },
+    { value: "Volibear", label: "Volibear" },
+    { value: "Ashe", label: "Ashe" },
+    { value: "Taric", label: "Taric" },
+    { value: "Kayle", label: "Kayle" },
+    { value: "Khazix", label: "Khazix" },
+    { value: "Leblanc", label: "Leblanc" },
+    { value: "Katarina", label: "Katarina" },
+    { value: "Nocturn", label: "Nocturn" },
+    { value: "Diana", label: "Diana" },
+    { value: "Viego", label: "Viego" },
+    { value: "Gragas", label: "Gragas" },
+    { value: "Warwick", label: "Warwick" },
+    { value: "Sett", label: "Sett" },
+    { value: "Nunu", label: "Nunu" },
+    { value: "Volibear", label: "Volibear" },
+    { value: "Heimerdinger", label: "Heimerdinger" },
+    { value: "Kled", label: "Kled" },
+    { value: "Hecarim", label: "Hecarim" },
+    { value: "Sejuani", label: "Sejuani" },
+    { value: "Rell", label: "Rell" },
+    { value: "Teemo", label: "Teemo" },
+    { value: "Darius", label: "Darius" },
+    { value: "Garen", label: "Garen" },
+    { value: "Syndra", label: "Syndra" },
+    { value: "Ivern", label: "Ivern" },
+    { value: "Karma", label: "Karma" },
+    { value: "Teemo", label: "Teemo" },
+    { value: "Leona", label: "Leona" },
+    { value: "Poppy", label: "Poppy" },
+    { value: "Nautilus", label: "Nautilus" },
+    { value: "Thresh", label: "Thresh" },
+    { value: "Taric", label: "Taric" },
+    { value: "Darius", label: "Darius" },
+    { value: "Garen", label: "Garen" },
+    { value: "Aatrox", label: "Aatrox" },
+    { value: "Kalista", label: "Kalista" },
+    { value: "Riven", label: "Riven" },
+    { value: "Yasuo", label: "Yasuo" },
+    { value: "Draven", label: "Draven" },
+    { value: "Mordekaiser", label: "Mordekaiser" },
+    { value: "Kayle", label: "Kayle" },
+    { value: "Lux", label: "Lux" },
+    { value: "Lulu", label: "Lulu" },
+    { value: "Morgana", label: "Morgana" },
+    { value: "Ryze", label: "Ryze" },
+    { value: "Kindred", label: "Kindred" },
+    { value: "Vayne", label: "Vayne" },
+    { value: "Varus", label: "Varus" },
+    { value: "Ashe", label: "Ashe" },
+    { value: "Aphelios", label: "Aphelios" },
+    { value: "Kindred", label: "Kindred" },
+    { value: "Lissandra", label: "Lissandra" },
+    { value: "Vladimir", label: "Vladimir" },
+    { value: "Soraka", label: "Soraka" },
+    { value: "Ivern", label: "Ivern" },
+    { value: "Heimerdinger", label: "Heimerdinger" },
+    { value: "Udyr", label: "Udyr" },
+    { value: "Kennen", label: "Kennen" },
+    { value: "Trundle", label: "Trundle" },
+    { value: "Leesin", label: "Leesin" },
+    { value: "Nidalee", label: "Nidalee" },
+    { value: "Pantheon", label: "Pantheon" },
+    { value: "Jax", label: "Jax" },
+    { value: "Viego", label: "Viego" },
+    { value: "Ziggs", label: "Ziggs" },
+    { value: "Brand", label: "Brand" },
+    { value: "Viktor", label: "Viktor" },
+    { value: "Zyra", label: "Zyra" },
+    { value: "Velkoz", label: "Velkoz" },
   ];
   // ↑champion↑
 
@@ -22,7 +146,7 @@ const AddForm = ({ onAdd }) => {
   const themeRef = useRef();
   const deck1Ref = useRef();
   const deck2Ref = useRef();
-  const championRef = useRef();
+  const championRef = useRef([]);
   const itemRef = useRef([]);
 
   const onSubmit = (event) => {
@@ -34,15 +158,18 @@ const AddForm = ({ onAdd }) => {
       deck1: deck1Ref.current.value || "",
       deck1: deck1Ref.current.value || "",
       deck2: deck2Ref.current.value || "",
-      champion: championRef.current.value || "",
+      champion: championRef.current || "",
       theme: themeRef.current.value || "white",
     };
     formRef.current.reset();
     onAdd(card);
   };
 
-  const handleChange = (e) => {
-    setSelectedCham(Array.isArray(e) ? e.map((x) => x.value) : []);
+  const handleChange = (value) => {
+    console.log(value);
+    const selectedcham = cham.concat(value);
+    setCham(selectedcham);
+    console.log(`slectedcham:`, selectedcham);
   };
 
   return (
@@ -139,26 +266,15 @@ const AddForm = ({ onAdd }) => {
         </div>
       </div>
       <div className={styles.champion}>
-        <Select
-          className={styles.select_champion}
-          ref={championRef}
+        <SelectChampion
           options={chamOptions}
-          value={chamOptions.filter((obj) =>
-            selectedCham.includes(obj.champion)
-          )}
+          className={styles.select_Champion}
+          placeholder="Select champions"
           onChange={handleChange}
-          isMulti
-          isClearable
-          placeholder="Select Champions"
+          defaultValue={chamOptions[1]}
+          isMulti={true}
+          ref={championRef}
         />
-        {selectedCham && (
-          <div>
-            <div>
-              <b>Selected Cham: </b>
-              <img src={CHAMPION_IMAGES.selectedCham} alt="cham" />
-            </div>
-          </div>
-        )}
       </div>
       <div className={styles.item}>
         <Item />
