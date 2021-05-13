@@ -81,6 +81,16 @@ li {
   margin: 0 0.15rem;
 }
 
+.cham_name {
+  display: flex;
+  margin: 0.3rem;
+}
+
+.champion_img {
+  width: 3rem;
+  height: 3rem;
+}
+
 .champion_list {
   display: flex;
   flex-direction: row;

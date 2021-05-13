@@ -6,6 +6,7 @@ import ITEM_IMAGES from "../../image/item";
 
 const Card = ({ card }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
+  cham.map((champion) => console.log(`${CHAMPION_IMAGES}`));
   return (
     <section className={`${styles.card} ${getTheme(theme)}`}>
       <li className={styles.list}>
@@ -17,11 +18,14 @@ const Card = ({ card }) => {
         <div className={styles.champion_list}>
           {cham &&
             cham.map((champion) => (
-              <img
-                src={`../../image/chamImage/${champion}.png`}
-                alt="champion"
-                className={styles.champion}
-              />
+              <div className={styles.champion_container}>
+                <p className={styles.cham_name}>{champion}</p>
+                <img
+                  className={styles.champion_img}
+                  src={require(`../../image/chamImage/${champion}.png`).default}
+                  alt="champion"
+                />
+              </div>
             ))}
         </div>
         {/* <div className={styles.item_list}>

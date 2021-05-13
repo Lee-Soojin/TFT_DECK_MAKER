@@ -82,7 +82,6 @@ const AddForm = ({ onAdd }) => {
   const themeRef = useRef();
   const deck1Ref = useRef();
   const deck2Ref = useRef();
-  const championRef = useRef([]);
   const itemRef = useRef([]);
 
   const onSubmit = (event) => {
@@ -93,7 +92,7 @@ const AddForm = ({ onAdd }) => {
       name: nameRef.current.value || "",
       deck1: deck1Ref.current.value || "",
       deck2: deck2Ref.current.value || "",
-      champion: championRef.current || "",
+      champion: cham || "",
       theme: themeRef.current.value || "white",
     };
     formRef.current.reset();
@@ -105,7 +104,7 @@ const AddForm = ({ onAdd }) => {
     const selectedcham = cham.concat({ ...cham, value });
     setCham(selectedcham);
     console.log(`selectedcham:`, selectedcham);
-    console.log(championRef.current.Array);
+    console.log(cham);
   };
 
   return (
@@ -204,12 +203,12 @@ const AddForm = ({ onAdd }) => {
       <div className={styles.champion}>
         <SelectChampion
           options={chamOptions}
+          value={cham}
           className={styles.select_Champion}
           placeholder="Select champions"
           onChange={handleChange}
           defaultValue={chamOptions[1]}
           isMulti={true}
-          ref={championRef}
         />
       </div>
       <div className={styles.item}>

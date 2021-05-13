@@ -2,7 +2,7 @@ import React from "react";
 import Select from "react-select";
 import styles from "./select_champion.module.css";
 
-const SelectChampion = ({ ref, options, onChange, defaultValue, isMulti }) => {
+const SelectChampion = ({ options, onChange, defaultValue, isMulti }) => {
   return (
     <>
       <Select
@@ -11,7 +11,6 @@ const SelectChampion = ({ ref, options, onChange, defaultValue, isMulti }) => {
         className={styles.select}
         onChange={onChange}
         defaultValue={defaultValue}
-        ref={ref}
       />
     </>
   );
