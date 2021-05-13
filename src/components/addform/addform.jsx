@@ -92,18 +92,26 @@ const AddForm = ({ onAdd }) => {
       name: nameRef.current.value || "",
       deck1: deck1Ref.current.value || "",
       deck2: deck2Ref.current.value || "",
-      champion: cham || "",
+      cham: cham || [],
       theme: themeRef.current.value || "white",
     };
     formRef.current.reset();
     onAdd(card);
+    console.log(cham);
+    console.log(card);
   };
 
   const handleChange = (value) => {
     console.log(value);
-    const selectedcham = cham.concat({ ...cham, value });
-    setCham(selectedcham);
-    console.log(`selectedcham:`, selectedcham);
+    value.map((v) => console.log(v.value));
+    const champion = value.map((v) => v.value);
+    console.log(champion);
+    const selectedcham = cham.concat(...cham, champion);
+    const Champion = selectedcham.filter(
+      (item, pos) => selectedcham.indexOf(item) === pos
+    );
+    setCham(Champion);
+    console.log(`selectedcham:`, Champion);
     console.log(cham);
   };
 
@@ -203,7 +211,6 @@ const AddForm = ({ onAdd }) => {
       <div className={styles.champion}>
         <SelectChampion
           options={chamOptions}
-          value={cham}
           className={styles.select_Champion}
           placeholder="Select champions"
           onChange={handleChange}

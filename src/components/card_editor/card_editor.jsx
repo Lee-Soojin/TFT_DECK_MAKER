@@ -7,7 +7,6 @@ import Item from "../item/item.jsx";
 
 const CardEditor = ({ card }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
-  const chamRef = useRef();
 
   return (
     <>
@@ -106,7 +105,14 @@ const CardEditor = ({ card }) => {
             </select>
           </div>
         </div>
-        <div className={styles.champion}>champion</div>
+        <div className={styles.champion}>
+          {cham &&
+            cham.map((champion) => (
+              <div className={styles.champion_container}>
+                <p className={styles.cham_name}>{champion}</p>
+              </div>
+            ))}
+        </div>
         <div className={styles.item}>
           <Item value={item} />
         </div>

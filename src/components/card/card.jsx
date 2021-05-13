@@ -3,10 +3,11 @@ import styles from "./card.module.css";
 import "../../image/index_image.js";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import ITEM_IMAGES from "../../image/item";
+import { render } from "@testing-library/react";
 
 const Card = ({ card }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
-  cham.map((champion) => console.log(`${CHAMPION_IMAGES}`));
+
   return (
     <section className={`${styles.card} ${getTheme(theme)}`}>
       <li className={styles.list}>
@@ -29,10 +30,10 @@ const Card = ({ card }) => {
             ))}
         </div>
         {/* <div className={styles.item_list}>
-          {item.map((item) => (
-            <img src={item} alt="item" className={styles.item} />
-          ))}
-        </div> */}
+            {item.map((item) => (
+              <img src={item} alt="item" className={styles.item} />
+            ))}
+          </div> */}
       </li>
     </section>
   );

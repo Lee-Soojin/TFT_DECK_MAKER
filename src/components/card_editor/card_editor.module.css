@@ -79,6 +79,18 @@
   display: flex;
 }
 
+.cham_name {
+  display: flex;
+  flex-direction: row;
+  margin: 0.2rem;
+  background-color: black;
+  color: white;
+  border-radius: 2px;
+  padding: 0.2rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .BtnDelete {
   display: flex;
   width: 3rem;
