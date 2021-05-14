@@ -11,7 +11,7 @@ import ITEM_IMAGES from "../../image/item";
 const Cards = ({ authService }) => {
   const [cards, setCards] = useState([
     {
-      theme: "yellow",
+      theme: "space",
       cham: [
         "Aatrox",
         "Aphelios",
@@ -63,9 +63,7 @@ const Cards = ({ authService }) => {
           <CardContainer cards={cards} />
         </div>
       </div>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+      <div className={styles.footer}>{/* <Footer /> */}</div>
     </div>
   );
 };

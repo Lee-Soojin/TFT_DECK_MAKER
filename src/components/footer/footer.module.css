@@ -4,11 +4,13 @@
 }
 
 .footer {
-  background-color: darkgray;
-  height: 100%;
+  background-color: rgba(255, 255, 255, 0.151);
+  height: 50%;
   width: 100%;
   align-items: center;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "lol_regular";
+  bottom: 0;
+  margin: 0;
 }

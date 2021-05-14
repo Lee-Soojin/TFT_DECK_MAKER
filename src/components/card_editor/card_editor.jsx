@@ -30,9 +30,9 @@ const CardEditor = ({ card }) => {
             className={styles.theme_select}
             value={theme}
           >
-            <option value="black">black</option>
-            <option value="white">white</option>
-            <option value="yellow">yellow</option>
+            <option value="judge">judge</option>
+            <option value="cartel">cartel</option>
+            <option value="space">space</option>
           </select>
         </div>
         <div className={styles.deck}>

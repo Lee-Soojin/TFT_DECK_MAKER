@@ -96,6 +96,7 @@ const AddForm = ({ onAdd }) => {
       theme: themeRef.current.value || "white",
     };
     formRef.current.reset();
+    setCham([]);
     onAdd(card);
     console.log(cham);
     console.log(card);
@@ -133,9 +134,9 @@ const AddForm = ({ onAdd }) => {
           className={styles.theme_select}
           ref={themeRef}
         >
-          <option placeholder="black">black</option>
-          <option placeholder="white">white</option>
-          <option placeholder="yellow">yellow</option>
+          <option placeholder="judge">judge</option>
+          <option placeholder="cartel">cartel</option>
+          <option placeholder="space">space</option>
         </select>
       </div>
       <div className={styles.deck}>

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./header.module.css";
-import TitleImg from "../../image/header_Title_2.png";
+import TitleImg from "../../image/header_title.png";
 import { Link } from "react-router-dom";
 
 const Header = ({ onLogout }) => {
@@ -13,7 +13,7 @@ const Header = ({ onLogout }) => {
       </div>
       <div className={styles.title_part}>
         <div className={styles.header_title}>
-          <img src={TitleImg} alt="title" />
+          <img src={TitleImg} alt="title" className={styles.header_img} />
         </div>
       </div>
       {true && (
