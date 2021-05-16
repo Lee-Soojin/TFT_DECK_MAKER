@@ -29,11 +29,6 @@ const Card = ({ card }) => {
               </div>
             ))}
         </div>
-        {/* <div className={styles.item_list}>
-            {item.map((item) => (
-              <img src={item} alt="item" className={styles.item} />
-            ))}
-          </div> */}
       </li>
     </section>
   );

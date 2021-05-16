@@ -90,6 +90,13 @@
   margin: 0 0.5rem;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: url(../../image/down_row.png) no-repeat 95% 50%;
+}
+
 .BtnDelete {
   display: flex;
   width: 3rem;
@@ -127,6 +134,7 @@
     justify-content: center;
     text-align: center;
     border-right: 1px solid black;
+    margin: 0 auto;
   }
 
   .cardname_input {
