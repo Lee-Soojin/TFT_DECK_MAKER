@@ -113,44 +113,10 @@ const CardEditor = ({ card }) => {
               </div>
             ))}
         </div>
-        <div className={styles.item}>
-          <Item value={item} />
-        </div>
+        <div className={styles.item}></div>
         <button className={styles.BtnDelete}>Delete</button>
       </form>
     </>
-
-    /* <div className={styles.select_part}>
-        <div className={styles.card_top}>
-          <div className={styles.name}>
-            <CardName />
-          </div>
-          <Theme />
-        </div>
-        <div className={styles.deck}>
-          <Deck />
-        </div>
-      </div>
-      <div className={styles.champion}>
-        <h3 className={styles.cham_title}>챔피언</h3>
-        <div className={styles.selected_cham}>
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-          <Champion />
-        </div>
-      </div>
-
-      <div className={styles.selected_item}>
-        <h3 className={styles.item_title}>아이템</h3>
-        <Item />
-      </div> */
   );
 };
 export default CardEditor;

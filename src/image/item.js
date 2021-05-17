@@ -31,7 +31,7 @@ const ITEM_IMAGES = {
   item_GiantSlayer_shadow: require("./ItemImage/GiantSlayer_shadow.png")
     .default,
   item_GiantSlayer: require("./ItemImage/GiantSlayer.png").default,
-  item_Glove: require("./ItemImage/glove.png").default,
+  item_BrawlersGloves: require("./ItemImage/BrawlersGloves.png").default,
   item_Guardian_s: require("./ItemImage/guardian_shadow.png").default,
   item_guardian: require("./ItemImage/guardian.png").default,
   item_Guinsoo_shadow: require("./ItemImage/guinsoo_shadow.png").default,
@@ -72,10 +72,10 @@ const ITEM_IMAGES = {
   item_MagesCap_shadow: require("./ItemImage/MagesCap_shadow.png").default,
   item_MantleofDusk_shadow: require("./ItemImage/MantleofDusk_shadow.png")
     .default,
-  item_SwordoftheDivine_shadow: require("./ItemImage/SwordoftheDivine_shadow.png")
-    .default,
-  item_VanguardsCuirass_shadow: require("./ItemImage/VanguardsCuirass_shadow.png")
-    .default,
+  item_SwordoftheDivine_shadow:
+    require("./ItemImage/SwordoftheDivine_shadow.png").default,
+  item_VanguardsCuirass_shadow:
+    require("./ItemImage/VanguardsCuirass_shadow.png").default,
   item_WarlordsBanner_shadow: require("./ItemImage/WarlordsBanner_shadow.png")
     .default,
   item_shojin_s: require("./ItemImage/shojin_shadow.png").default,

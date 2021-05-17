@@ -1,11 +1,13 @@
 .select {
-  width: 18rem;
-  max-width: 22rem;
+  position: absolute;
+  width: 13rem;
+  max-width: 25rem;
+  margin: 1rem;
 }
 
 @media screen and (max-width: 80rem) {
   .select {
-    width: 15rem;
+    width: 10rem;
     height: 3rem;
   }
 }

@@ -1,0 +1,32 @@
+.Item_Container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 27.5rem;
+  height: 35rem;
+  box-shadow: 0 1px 8px gray;
+  opacity: 0;
+  visibility: hidden;
+  margin-left: 1rem;
+  overflow: scroll;
+  z-index: 100;
+  margin: 0;
+}
+
+.Item_Container.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(3rem);
+  width: 15rem;
+  height: 33rem;
+}
+
+.Item_Container.invisible {
+  height: 1rem;
+}
+
+.item_img {
+  width: 2rem;
+  height: 2rem;
+}

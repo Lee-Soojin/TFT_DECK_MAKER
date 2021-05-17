@@ -22,11 +22,7 @@ const Cards = ({ authService }) => {
         "Draven",
         "Garen",
       ],
-      item: [
-        ITEM_IMAGES.item_Arch,
-        ITEM_IMAGES.item_Armor,
-        ITEM_IMAGES.item_Bow,
-      ],
+      item: [],
       name: "new card",
       deck1: "coven",
       deck2: "draconic",

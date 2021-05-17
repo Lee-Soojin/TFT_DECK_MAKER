@@ -76,14 +76,526 @@ const AddForm = ({ onAdd }) => {
     { value: "Heimerdinger", label: "Heimerdinger" },
   ];
 
-  // ↑champion↑
+  const items = [
+    {
+      name: "B.F대검",
+      url: require("../../image/ItemImage/sword.png").default,
+    },
+    { name: "곡궁", url: require("../../image/ItemImage/bow.png").default },
+    {
+      name: "쇠사슬 조끼",
+      url: require("../../image/ItemImage/armor.png").default,
+    },
+    {
+      name: "음전자 망토",
+      url: require("../../image/ItemImage/cape.png").default,
+    },
+    {
+      name: "쓸데없이 큰 지팡이",
+      url: require("../../image/ItemImage/stick.png").default,
+    },
+    {
+      name: "여신의 눈물",
+      url: require("../../image/ItemImage/tear.png").default,
+    },
+    {
+      name: "거인의 허리띠",
+      url: require("../../image/ItemImage/belt.png").default,
+    },
+    {
+      name: "연습용 장갑",
+      url: require("../../image/ItemImage/BrawlersGloves.png").default,
+    },
+    {
+      name: "뒤집개",
+      url: require("../../image/ItemImage/Spatula.png").default,
+    },
+    {
+      name: "그림자 뒤집개",
+      url: require("../../image/ItemImage/spatula_shadow.png").default,
+    },
+    {
+      name: "죽음의 검",
+      url: require("../../image/ItemImage/LordsEdge.png").default,
+    },
+    {
+      name: "거인 학살자",
+      url: require("../../image/ItemImage/GiantSlayer.png").default,
+    },
+    {
+      name: "수호 천사",
+      url: require("../../image/ItemImage/guardian.png").default,
+    },
+    {
+      name: "피바라기",
+      url: require("../../image/ItemImage/blood.png").default,
+    },
+    {
+      name: "마법공학 총검",
+      url: require("../../image/ItemImage/Hextech.png").default,
+    },
+    {
+      name: "쇼진의 창",
+      url: require("../../image/ItemImage/shojin.png").default,
+    },
+    {
+      name: "지크의 전령",
+      url: require("../../image/ItemImage/ZekesHerald.png").default,
+    },
+    {
+      name: "무한의 대검",
+      url: require("../../image/ItemImage/infinity.png").default,
+    },
+    {
+      name: "척후병 상징",
+      url: require("../../image/ItemImage/SwordoftheDivine.png").default,
+    },
+    {
+      name: "망각 상징",
+      url: require("../../image/ItemImage/SwordoftheDivine_shadow.png").default,
+    },
+    {
+      name: "고속 연사포",
+      url: require("../../image/ItemImage/rapid.png").default,
+    },
+    {
+      name: "거인의 결의",
+      url: require("../../image/ItemImage/TitansResolve.png").default,
+    },
+    {
+      name: "루난의 허리케인",
+      url: require("../../image/ItemImage/runnan.png").default,
+    },
+    {
+      name: "구인수의 격노검",
+      url: require("../../image/ItemImage/guinsoo.png").default,
+    },
+    {
+      name: "스태틱의 단검",
+      url: require("../../image/ItemImage/statikk.png").default,
+    },
+    {
+      name: "즈롯 차원문",
+      url: require("../../image/ItemImage/ZzRotPortal.png").default,
+    },
+    {
+      name: "최후의 속삭임",
+      url: require("../../image/ItemImage/last_whisper.png").default,
+    },
+    {
+      name: "군단 상징",
+      url: require("../../image/ItemImage/DuelistsZeal.png").default,
+    },
+    {
+      name: "악동 상징",
+      url: require("../../image/ItemImage/DuelistsZeal_shadow.png").default,
+    },
+    {
+      name: "덤불 조끼",
+      url: require("../../image/ItemImage/vest.png").default,
+    },
+    {
+      name: "가고일 돌갑옷",
+      url: require("../../image/ItemImage/IronWill.png").default,
+    },
+    {
+      name: "강철의 솔라리 팬던트",
+      url: require("../../image/ItemImage/IronSolari.png").default,
+    },
+    {
+      name: "얼어붙은 심장",
+      url: require("../../image/ItemImage/frozen.png").default,
+    },
+    {
+      name: "태양불꽃 망토",
+      url: require("../../image/ItemImage/SunfireCape.png").default,
+    },
+    {
+      name: "침묵의 장막",
+      url: require("../../image/ItemImage/Shroud.png").default,
+    },
+    {
+      name: "철갑 상징",
+      url: require("../../image/ItemImage/VanguardsCuirass.png").default,
+    },
+    {
+      name: "기병대 상징",
+      url: require("../../image/ItemImage/VanguardsCuirass_shadow.png").default,
+    },
+    {
+      name: "용의 발톱",
+      url: require("../../image/ItemImage/DragonsClaw.png").default,
+    },
+    {
+      name: "이온충격기",
+      url: require("../../image/ItemImage/IonicSpark.png").default,
+    },
+    {
+      name: "힘의 성배",
+      url: require("../../image/ItemImage/Chalice.png").default,
+    },
+    {
+      name: "서풍",
+      url: require("../../image/ItemImage/Zephyr.png").default,
+    },
+    {
+      name: "수은",
+      url: require("../../image/ItemImage/Quicksilver.png").default,
+    },
+    {
+      name: "구원받은 자 상징",
+      url: require("../../image/ItemImage/ElderwoodHeirloom.png").default,
+    },
+    {
+      name: "망령 상징",
+      url: require("../../image/ItemImage/ElderwoodHeirloom_shadow.png")
+        .default,
+    },
+    {
+      name: "라바돈의 죽음모자",
+      url: require("../../image/ItemImage/rabadon.png").default,
+    },
+    {
+      name: "대천사의 지팡이",
+      url: require("../../image/ItemImage/arch.png").default,
+    },
+    {
+      name: "모렐로노미콘",
+      url: require("../../image/ItemImage/Morello.png").default,
+    },
+    {
+      name: "보석 건틀릿",
+      url: require("../../image/ItemImage/ArcaneGauntlet.png").default,
+    },
+    {
+      name: "주문술사 상징",
+      url: require("../../image/ItemImage/MantleofDusk.png").default,
+    },
+    {
+      name: "용 사냥꾼 상징",
+      url: require("../../image/ItemImage/MantleofDusk_shadow.png").default,
+    },
+    {
+      name: "푸른 파수꾼",
+      url: require("../../image/ItemImage/BlueBuff.png").default,
+    },
+    {
+      name: "구원",
+      url: require("../../image/ItemImage/sacrificial.png").default,
+    },
+    {
+      name: "정의의 손길",
+      url: require("../../image/ItemImage/HandofJustice.png").default,
+    },
+    {
+      name: "재생술사 상징",
+      url: require("../../image/ItemImage/MagesCap.png").default,
+    },
+    {
+      name: "악의 여단 상징",
+      url: require("../../image/ItemImage/MagesCap_shadow.png").default,
+    },
+    {
+      name: "워모그의 갑옷",
+      url: require("../../image/ItemImage/warmog.png").default,
+    },
+    {
+      name: "덫 발톱",
+      url: require("../../image/ItemImage/Backhand.png").default,
+    },
+    {
+      name: "빛의 인도자 상징",
+      url: require("../../image/ItemImage/WarlordsBanner.png").default,
+    },
+    {
+      name: "어둠의 인도자 상징",
+      url: require("../../image/ItemImage/WarlordsBanner_shadow.png").default,
+    },
+    {
+      name: "도적의 장갑",
+      url: require("../../image/ItemImage/ThiefsGloves.png").default,
+    },
+    {
+      name: "암살자 상징",
+      url: require("../../image/ItemImage/GhostBlade.png").default,
+    },
+    {
+      name: "괴생명체 상징",
+      url: require("../../image/ItemImage/GhostBlade_shadow.png").default,
+    },
+    {
+      name: "대자연의 힘",
+      url: require("../../image/ItemImage/ForceOfNature.png").default,
+    },
+    {
+      name: "암흑의 힘",
+      url: require("../../image/ItemImage/ForceOfNature_shadow.png").default,
+    },
+    // shadow
+    {
+      name: "그림자 검",
+      url: require("../../image/ItemImage/sword_shadow.png").default,
+    },
+    {
+      name: "그림자 활",
+      url: require("../../image/ItemImage/bow_shadow.png").default,
+    },
+    {
+      name: "그림자 조끼",
+      url: require("../../image/ItemImage/armor_shadow.png").default,
+    },
+    {
+      name: "그림자 망토",
+      url: require("../../image/ItemImage/cape_shadow.png").default,
+    },
+    {
+      name: "그림자 지팡이",
+      url: require("../../image/ItemImage/stick_shadow.png").default,
+    },
+    {
+      name: "그림자 눈물",
+      url: require("../../image/ItemImage/tear_shadow.png").default,
+    },
+    {
+      name: "그림자 허리띠",
+      url: require("../../image/ItemImage/belt_shadow.png").default,
+    },
+    {
+      name: "그림자 장갑",
+      url: require("../../image/ItemImage/BrawlersGloves_shadow.png").default,
+    },
+    {
+      name: "뒤집개",
+      url: require("../../image/ItemImage/Spatula.png").default,
+    },
+    {
+      name: "그림자 뒤집개",
+      url: require("../../image/ItemImage/spatula_shadow.png").default,
+    },
+    {
+      name: "부식성 죽음의 검",
+      url: require("../../image/ItemImage/LordsEdge_shadow.png").default,
+    },
+    {
+      name: "유령 거인 학살자",
+      url: require("../../image/ItemImage/GiantSlayer_shadow.png").default,
+    },
+    {
+      name: "타락한 수호 천사",
+      url: require("../../image/ItemImage/guardian_shadow.png").default,
+    },
+    {
+      name: "지옥바라기",
+      url: require("../../image/ItemImage/blood_shadow.png").default,
+    },
+    {
+      name: "불멸의 마법공학 총검",
+      url: require("../../image/ItemImage/Hextech_shadow.png").default,
+    },
+    {
+      name: "망령 쇼진의 창",
+      url: require("../../image/ItemImage/shojin_shadow.png").default,
+    },
+    {
+      name: "지크의 음산한 정령",
+      url: require("../../image/ItemImage/ZekesHerald_shadow.png").default,
+    },
+    {
+      name: "무한의 제물 대검",
+      url: require("../../image/ItemImage/infinity_shadow.png").default,
+    },
+    {
+      name: "척후병 상징",
+      url: require("../../image/ItemImage/SwordoftheDivine.png").default,
+    },
+    {
+      name: "망각 상징",
+      url: require("../../image/ItemImage/SwordoftheDivine_shadow.png").default,
+    },
+    {
+      name: "고속 사망포",
+      url: require("../../image/ItemImage/rapid_shadow.png").default,
+    },
+    {
+      name: "거인의 복수",
+      url: require("../../image/ItemImage/TitansResolve_shadow.png").default,
+    },
+    {
+      name: "루난의 길들지 않은 허리케인",
+      url: require("../../image/ItemImage/runnan_shadow.png").default,
+    },
+    {
+      name: "구인수의 제물 격노검",
+      url: require("../../image/ItemImage/guinsoo_shadow.png").default,
+    },
+    {
+      name: "스태틱의 단도",
+      url: require("../../image/ItemImage/statikk_shadow.png").default,
+    },
+    {
+      name: "불안정한 즈롯 차원문",
+      url: require("../../image/ItemImage/ZzRotPortal_shadow.png").default,
+    },
+    {
+      name: "마지막 속삭임",
+      url: require("../../image/ItemImage/last_whisper_shadow.png").default,
+    },
+    {
+      name: "군단 상징",
+      url: require("../../image/ItemImage/DuelistsZeal.png").default,
+    },
+    {
+      name: "악동 상징",
+      url: require("../../image/ItemImage/DuelistsZeal_shadow.png").default,
+    },
+    {
+      name: "구부러진 덤불 조끼",
+      url: require("../../image/ItemImage/vest_shadow.png").default,
+    },
+    {
+      name: "불멸의 가고일 돌갑옷",
+      url: require("../../image/ItemImage/IronWill_shadow.png").default,
+    },
+    {
+      name: "은빛 루나리 펜던트",
+      url: require("../../image/ItemImage/Solari_shadow.png").default,
+    },
+    {
+      name: "얼어붙은 검은 심장",
+      url: require("../../image/ItemImage/frozen_shadow.png").default,
+    },
+    {
+      name: "일식의 망토",
+      url: require("../../image/ItemImage/SunfireCape_shadow.png").default,
+    },
+    {
+      name: "침묵의 흑막",
+      url: require("../../image/ItemImage/Shroud_shadow.png").default,
+    },
+    {
+      name: "철갑 상징",
+      url: require("../../image/ItemImage/VanguardsCuirass.png").default,
+    },
+    {
+      name: "기병대 상징",
+      url: require("../../image/ItemImage/VanguardsCuirass_shadow.png").default,
+    },
+    {
+      name: "구부러진 용의 발톱",
+      url: require("../../image/ItemImage/DragonsClaw_shadow.png").default,
+    },
+    {
+      name: "암흑 이온 충격기",
+      url: require("../../image/ItemImage/IonicSpark_shadow.png").default,
+    },
+    {
+      name: "악의의 성배",
+      url: require("../../image/ItemImage/ChaliceOfPower_shadow.png").default,
+    },
+    {
+      name: "사나운 서풍",
+      url: require("../../image/ItemImage/Zephyr_shadow.png").default,
+    },
+    {
+      name: "부식성 수은",
+      url: require("../../image/ItemImage/Quicksilver_shadow.png").default,
+    },
+    {
+      name: "구원받은 자 상징",
+      url: require("../../image/ItemImage/ElderwoodHeirloom.png").default,
+    },
+    {
+      name: "망령 상징",
+      url: require("../../image/ItemImage/ElderwoodHeirloom_shadow.png")
+        .default,
+    },
+    {
+      name: "라바돈의 부식성 죽음모자",
+      url: require("../../image/ItemImage/rabadon_shadow.png").default,
+    },
+    {
+      name: "대악마의 불멸 지팡이",
+      url: require("../../image/ItemImage/arch_shadow.png").default,
+    },
+    {
+      name: "데블로노미콘",
+      url: require("../../image/ItemImage/Morello_shadow.png").default,
+    },
+    {
+      name: "제물 건틀릿",
+      url: require("../../image/ItemImage/ArcaneGauntlet_shadow.png").default,
+    },
+    {
+      name: "주문술사 상징",
+      url: require("../../image/ItemImage/MantleofDusk.png").default,
+    },
+    {
+      name: "용 사냥꾼 상징",
+      url: require("../../image/ItemImage/MantleofDusk_shadow.png").default,
+    },
+    {
+      name: "암흑의 푸른 파수꾼",
+      url: require("../../image/ItemImage/BlueBuff_shadow.png").default,
+    },
+    {
+      name: "제물로 바친 구원",
+      url: require("../../image/ItemImage/sacrificial_shadow.png").default,
+    },
+    {
+      name: "복수의 손길",
+      url: require("../../image/ItemImage/HandofJustice_shadow.png").default,
+    },
+    {
+      name: "재생술사 상징",
+      url: require("../../image/ItemImage/MagesCap.png").default,
+    },
+    {
+      name: "악의 여단 상징",
+      url: require("../../image/ItemImage/MagesCap_shadow.png").default,
+    },
+    {
+      name: "워모그의 제물 갑옷",
+      url: require("../../image/ItemImage/warmog_shadow.png").default,
+    },
+    {
+      name: "복수의 덫 발톱",
+      url: require("../../image/ItemImage/Backhand_shadow.png").default,
+    },
+    {
+      name: "빛의 인도자 상징",
+      url: require("../../image/ItemImage/WarlordsBanner.png").default,
+    },
+    {
+      name: "어둠의 인도자 상징",
+      url: require("../../image/ItemImage/WarlordsBanner_shadow.png").default,
+    },
+    {
+      name: "사기꾼의 장갑",
+      url: require("../../image/ItemImage/ThiefsGloves_shadow.png").default,
+    },
+    {
+      name: "암살자 상징",
+      url: require("../../image/ItemImage/GhostBlade.png").default,
+    },
+    {
+      name: "괴생명체 상징",
+      url: require("../../image/ItemImage/GhostBlade_shadow.png").default,
+    },
+    {
+      name: "대자연의 힘",
+      url: require("../../image/ItemImage/ForceOfNature.png").default,
+    },
+    {
+      name: "암흑의 힘",
+      url: require("../../image/ItemImage/ForceOfNature_shadow.png").default,
+    },
+  ];
 
   const formRef = useRef();
   const nameRef = useRef();
   const themeRef = useRef();
   const deck1Ref = useRef();
   const deck2Ref = useRef();
-  const itemRef = useRef([]);
 
   const onSubmit = (event) => {
     console.log(event);
@@ -120,6 +632,7 @@ const AddForm = ({ onAdd }) => {
   return (
     <form ref={formRef} className={styles.form}>
       <div className={styles.card_name}>
+        <p className={styles.name_title}>카드 이름</p>
         <input
           className={styles.cardname_input}
           type="text"
@@ -128,7 +641,7 @@ const AddForm = ({ onAdd }) => {
         />
       </div>
       <div className={styles.theme}>
-        <p className={styles.title}>테마 선택</p>
+        <p className={styles.theme_title}>테마 선택</p>
         <select
           name="theme"
           placeholder="Theme"
@@ -211,6 +724,7 @@ const AddForm = ({ onAdd }) => {
         </div>
       </div>
       <div className={styles.champion}>
+        <p className={styles.champion_title}>챔피언 선택</p>
         <SelectChampion
           options={chamOptions}
           className={styles.select_Champion}
@@ -221,7 +735,7 @@ const AddForm = ({ onAdd }) => {
         />
       </div>
       <div className={styles.item}>
-        <Item />
+        <Item items={items} />
       </div>
       <button className={styles.BtnAdd} onClick={onSubmit}>
         추가

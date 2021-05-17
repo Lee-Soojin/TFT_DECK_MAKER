@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "nanum_bolde";
+  font-family: "nanum_bold";
   src: url(../../font/NanumGothic-Bold.ttf);
 }
 
 .form {
   width: 90%;
-  height: 20rem;
+  height: 25rem;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -15,22 +15,19 @@
 
 .card_name {
   display: flex;
-  width: 30%;
-  height: 40%;
+  flex-direction: column;
+  width: 20%;
+  height: 20%;
   margin-left: 3rem;
+  margin-top: 1.5rem;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid gray;
 }
 
-.BtnAdd {
-  display: flex;
-  width: 2.5rem;
-  height: 1.3rem;
-  margin: 0.3rem;
-  font-size: 0.5rem;
-  justify-content: center;
-  align-items: center;
+.name_title {
+  font-size: 0.8rem;
+  font-family: "nanum_bold";
 }
 
 .cardname_input {
@@ -43,13 +40,15 @@
 .theme {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  height: 30%;
+  width: 20%;
+  height: 20%;
   margin-left: 3rem;
   align-items: center;
   justify-content: center;
   align-items: center;
   text-align: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 0.7rem;
 }
 
 .theme_title {
@@ -64,10 +63,13 @@
 .deck {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin: 1rem 0;
+  width: 20%;
+  margin-left: 3rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid gray;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .deck1_title,
@@ -83,8 +85,20 @@
   text-align: center;
 }
 
+.champion_title {
+  font-family: "nanum_bold";
+  font-size: 0.8rem;
+}
+
+.champion {
+  flex-direction: column;
+  width: 30%;
+  height: 100%;
+  margin: 1rem 2rem;
+}
+
 .select_Champion {
-  width: 15rem;
+  width: 25%;
   height: 1rem;
   font-size: 0.8rem;
   margin: 0 0.5rem;
@@ -97,11 +111,27 @@ select {
   background: url(../../image/down_row.png) no-repeat 95% 50%;
 }
 
-.BtnDelete {
+.item {
+  display: flex;
+  width: 30%;
+  margin-right: 3rem;
+  flex-direction: column;
+  height: 80%;
+  margin: 1rem 1rem;
+  align-items: center;
+  text-align: center;
+  /* justify-content: center; */
+}
+
+.BtnAdd {
   display: flex;
   width: 3rem;
+  height: 1.5rem;
   align-items: center;
   justify-content: center;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 80rem) {

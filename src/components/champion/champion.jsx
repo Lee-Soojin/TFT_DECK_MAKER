@@ -12,25 +12,6 @@ const Champion = React.forwardRef((props, ref) => {
   const [imgalt, setImgAlt] = useState("");
   const [champion, setCham] = useState([]);
 
-  // const selectChampion = () => {
-  //   Firebase.database().ref("/card").set(champion);
-  // };
-
-  // const getChampion = () => {
-  //   let ref = Firebase.database().ref("/card");
-  //   ref.on("value", (snapshot) => {
-  //     const state = snapshot.val();
-  //     setCham(state);
-  //   });
-  // };
-
-  // useEffect((prevState) => {
-  //   getChampion();
-  //   if (prevState !== champion) {
-  //     selectChampion();
-  //   }
-  // });
-
   const onClick = () => setActive(!active);
 
   const handleSelect = (e) => {
