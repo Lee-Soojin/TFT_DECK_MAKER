@@ -29,6 +29,14 @@ const Card = ({ card }) => {
               </div>
             ))}
         </div>
+        <div className={styles.item_list}>
+          {item &&
+            item.map((Item) => (
+              <div className={styles.item_container}>
+                <img className={styles.item_img} src={Item} alt="champion" />
+              </div>
+            ))}
+        </div>
       </li>
     </section>
   );

@@ -22,7 +22,11 @@ const Cards = ({ authService }) => {
         "Draven",
         "Garen",
       ],
-      item: [],
+      item: [
+        require("../../image/ItemImage/sword.png").default,
+        require("../../image/ItemImage/sword.png").default,
+        require("../../image/ItemImage/sword.png").default,
+      ],
       name: "new card",
       deck1: "coven",
       deck2: "draconic",

@@ -2,7 +2,7 @@ import styles from "./item.module.css";
 import "./item.css";
 import React, { useState } from "react";
 
-const Item = ({ items }) => {
+const Item = ({ items, onChange }) => {
   const [visibility, setVisibility] = useState(false);
   const [selectedItem, setSelectedItem] = useState([]);
   const handleClick = (e) => {
@@ -21,6 +21,7 @@ const Item = ({ items }) => {
     setSelectedItem(Items);
     console.log(`Items:`, Items);
     console.log(selectedItem);
+    onChange(e.target.src);
   };
 
   return (

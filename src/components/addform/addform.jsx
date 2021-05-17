@@ -8,6 +8,7 @@ import SelectChampion from "../select_champion/select_champion";
 
 const AddForm = ({ onAdd }) => {
   const [cham, setCham] = useState([]);
+  const [item, setItem] = useState([]);
   const chamOptions = [
     { value: "Kalista", label: "Kalista" },
     { value: "Brand", label: "Brand" },
@@ -607,9 +608,11 @@ const AddForm = ({ onAdd }) => {
       deck2: deck2Ref.current.value || "",
       cham: cham || [],
       theme: themeRef.current.value || "white",
+      item: item || [],
     };
     formRef.current.reset();
     setCham([]);
+    // setItem([]);
     onAdd(card);
     console.log(cham);
     console.log(card);
@@ -627,6 +630,17 @@ const AddForm = ({ onAdd }) => {
     setCham(Champion);
     console.log(`selectedcham:`, Champion);
     console.log(cham);
+  };
+
+  const handleItem = (url) => {
+    // e.preventDefault();
+    console.log("url:", url);
+    const selecteditem = item.concat(...item, url);
+    const Item = selecteditem.filter(
+      (item, pos) => selecteditem.indexOf(item) === pos
+    );
+    setItem(Item);
+    console.log(`selectedItem:`, Item);
   };
 
   return (
@@ -735,7 +749,7 @@ const AddForm = ({ onAdd }) => {
         />
       </div>
       <div className={styles.item}>
-        <Item items={items} />
+        <Item items={items} onChange={handleItem} />
       </div>
       <button className={styles.BtnAdd} onClick={onSubmit}>
         추가
