@@ -7,8 +7,8 @@ const CardContainer = ({ cards }) => {
     <>
       <h1 className={styles.title}>CardContainer</h1>
       <section className={styles.card_container}>
-        {cards.map((card) => (
-          <Card card={card} />
+        {Object.keys(cards).map((key) => (
+          <Card key={key} card={cards[key]} />
         ))}
       </section>
     </>

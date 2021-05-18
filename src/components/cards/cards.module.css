@@ -9,6 +9,7 @@
   width: 100%;
   height: 100%;
   background-image: url(../../image/background_gradient.jpg);
+  overflow: auto;
 }
 
 .header {
@@ -18,7 +19,7 @@
 .card_maker {
   width: 50%;
   height: 100%;
-  overflow-y: auto;
+  overflow-y: inherit;
 }
 
 .card_container {

@@ -612,6 +612,7 @@ const AddForm = ({ onAdd }) => {
     };
     formRef.current.reset();
     setCham([]);
+    setItem([]);
     // setItem([]);
     onAdd(card);
     console.log(cham);

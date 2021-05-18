@@ -24,6 +24,12 @@ const Item = ({ items, onChange }) => {
     onChange(e.target.src);
   };
 
+  const handleReset = (e) => {
+    e.preventDefault();
+    setSelectedItem([]);
+    console.log(selectedItem);
+  };
+
   return (
     <div className={styles.Itemlist}>
       <p className={styles.item_title}>아이템 선택</p>
@@ -56,6 +62,9 @@ const Item = ({ items, onChange }) => {
               ></img>
             ))}
         </div>
+        <button onClick={handleReset} className={styles.BtnResetItem}>
+          아이템 초기화
+        </button>
       </div>
     </div>
   );

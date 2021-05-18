@@ -79,3 +79,23 @@
   width: 1.8rem;
   height: 1.8rem;
 }
+
+.BtnResetItem {
+  width: 6rem;
+  height: 1.5rem;
+  font-size: 0.7rem;
+  align-items: center;
+  margin: 0 auto;
+  background: none;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: rgba(245, 222, 179, 0.61);
+  margin-top: 2rem;
+  font-family: "nanum_bold";
+  box-shadow: 1px 2px 2px gray;
+  cursor: pointer;
+}
+
+.BtnResetItem:hover {
+  transform: scale(1.05);
+}

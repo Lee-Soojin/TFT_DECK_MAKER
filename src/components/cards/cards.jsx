@@ -9,8 +9,9 @@ import CHAMPION_IMAGES from "../../image/index_image.js";
 import ITEM_IMAGES from "../../image/item";
 
 const Cards = ({ authService }) => {
-  const [cards, setCards] = useState([
-    {
+  const [cards, setCards] = useState({
+    1: {
+      id: "1",
       theme: "space",
       cham: [
         "Aatrox",
@@ -31,7 +32,30 @@ const Cards = ({ authService }) => {
       deck1: "coven",
       deck2: "draconic",
     },
-  ]);
+    2: {
+      id: "2",
+      theme: "judge",
+      cham: [
+        "Katarina",
+        "Brand",
+        "Ashe",
+        "Taric",
+        "Nidalee",
+        "Diana",
+        "Darius",
+        "Garen",
+      ],
+      item: [
+        require("../../image/ItemImage/armor.png").default,
+        require("../../image/ItemImage/armor.png").default,
+        require("../../image/ItemImage/armor.png").default,
+      ],
+      name: "new card",
+      deck1: "coven",
+      deck2: "draconic",
+    },
+  });
+
   const history = useHistory();
   const onLogout = () => {
     authService.logout();
@@ -45,9 +69,25 @@ const Cards = ({ authService }) => {
     });
   });
 
-  const addCard = (card) => {
-    const updated = [...cards, card];
-    setCards(updated);
+  // const addCard = (card) => {
+  //   const updated = [...cards, card];
+  //   setCards(updated);
+  // };
+
+  const createOrUpdateCard = (card) => {
+    setCards((cards) => {
+      const updated = { ...cards };
+      updated[card.id] = card;
+      return updated;
+    });
+  };
+
+  const deleteCard = (card) => {
+    setCards((cards) => {
+      const updated = { ...cards };
+      delete updated[card.id];
+      return updated;
+    });
   };
 
   return (
@@ -57,7 +97,12 @@ const Cards = ({ authService }) => {
       </div>
       <div className={styles.card_board}>
         <div className={styles.card_maker}>
-          <CardMaker cards={cards} addCard={addCard} />
+          <CardMaker
+            cards={cards}
+            addCard={createOrUpdateCard}
+            updateCard={createOrUpdateCard}
+            deleteCard={deleteCard}
+          />
         </div>
         <div className={styles.card_container}>
           <CardContainer cards={cards} />
