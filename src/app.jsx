@@ -6,7 +6,7 @@ import SignUp from "./components/login/signup";
 import Cards from "./components/cards/cards";
 import "./service/firebase";
 
-function App({ authService }) {
+function App({ authService, cardRepository }) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
@@ -14,7 +14,9 @@ function App({ authService }) {
         <Route
           exact
           path="/card"
-          render={() => <Cards authService={authService} />}
+          render={() => (
+            <Cards authService={authService} cardRepository={cardRepository} />
+          )}
         />
         <Route
           path="/signup"

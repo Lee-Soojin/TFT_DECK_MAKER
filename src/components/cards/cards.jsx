@@ -8,53 +8,11 @@ import { useHistory } from "react-router";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import ITEM_IMAGES from "../../image/item";
 
-const Cards = ({ authService }) => {
-  const [cards, setCards] = useState({
-    1: {
-      id: "1",
-      theme: "space",
-      cham: [
-        "Aatrox",
-        "Aphelios",
-        "Ashe",
-        "Brand",
-        "Darius",
-        "Diana",
-        "Draven",
-        "Garen",
-      ],
-      item: [
-        require("../../image/ItemImage/sword.png").default,
-        require("../../image/ItemImage/sword.png").default,
-        require("../../image/ItemImage/sword.png").default,
-      ],
-      name: "new card",
-      deck1: "coven",
-      deck2: "draconic",
-    },
-    2: {
-      id: "2",
-      theme: "judge",
-      cham: [
-        "Katarina",
-        "Brand",
-        "Ashe",
-        "Taric",
-        "Nidalee",
-        "Diana",
-        "Darius",
-        "Garen",
-      ],
-      item: [
-        require("../../image/ItemImage/armor.png").default,
-        require("../../image/ItemImage/armor.png").default,
-        require("../../image/ItemImage/armor.png").default,
-      ],
-      name: "new card",
-      deck1: "coven",
-      deck2: "draconic",
-    },
-  });
+const Cards = ({ authService, cardRepository }) => {
+  const History = useHistory();
+  const historyState = History?.location?.state;
+  const [cards, setCards] = useState({});
+  const [userId, setUserId] = useState(historyState && historyState.id);
 
   const history = useHistory();
   const onLogout = () => {
@@ -62,17 +20,24 @@ const Cards = ({ authService }) => {
   };
 
   useEffect(() => {
+    if (!userId) {
+      return;
+    }
+    const stopSync = cardRepository.syncCards(userId, (cards) => {
+      setCards(cards);
+    });
+    return () => stopSync();
+  }, [userId]);
+
+  useEffect(() => {
     authService.onAuthChange((user) => {
-      if (!user) {
+      if (user) {
+        setUserId(user.uid);
+      } else {
         history.push("/");
       }
     });
   });
-
-  // const addCard = (card) => {
-  //   const updated = [...cards, card];
-  //   setCards(updated);
-  // };
 
   const createOrUpdateCard = (card) => {
     setCards((cards) => {
@@ -80,6 +45,7 @@ const Cards = ({ authService }) => {
       updated[card.id] = card;
       return updated;
     });
+    cardRepository.saveCard(userId, card);
   };
 
   const deleteCard = (card) => {
@@ -88,6 +54,7 @@ const Cards = ({ authService }) => {
       delete updated[card.id];
       return updated;
     });
+    cardRepository.removeCard(userId, card);
   };
 
   return (
