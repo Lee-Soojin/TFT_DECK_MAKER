@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "./card.module.css";
 import "../../image/index_image.js";
-import CHAMPION_IMAGES from "../../image/index_image.js";
-import ITEM_IMAGES from "../../image/item";
-import { render } from "@testing-library/react";
 
 const Card = ({ card }) => {
   const { name, cham, item, deck1, deck2, theme } = card;

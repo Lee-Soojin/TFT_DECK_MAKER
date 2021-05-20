@@ -12,6 +12,7 @@
   background-color: rgba(255, 255, 255, 0.164);
   border-radius: 0.5rem;
   margin: 1.5rem 0;
+  position: relative;
 }
 
 .card_name {
@@ -25,7 +26,6 @@
   margin: 1.5rem 0 0 3rem;
   align-items: center;
   justify-content: center;
-  border-bottom: 1px solid gray;
   padding-bottom: 1.5rem;
 }
 
@@ -52,6 +52,7 @@
   background-color: rgba(255, 255, 255, 0.616);
   height: 1.2rem;
   margin: 0 0.3rem;
+  text-align: center;
 }
 
 .theme {
@@ -64,7 +65,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-bottom: 1px solid gray;
   padding-bottom: 1rem;
 }
 
@@ -74,7 +74,8 @@
 }
 
 .theme_select {
-  width: 7rem;
+  width: 6rem;
+  padding: 0.3rem;
 }
 
 .deck {
@@ -93,6 +94,13 @@
 .deck2_title {
   font-family: "nanum_bold";
   font-size: 0.8rem;
+  text-align: center;
+}
+
+.deck1_select,
+.deck2_select {
+  width: 6rem;
+  padding: 0.3rem;
 }
 
 .champion,
@@ -188,105 +196,81 @@
 }
 
 .BtnDelete {
+  position: absolute;
   display: flex;
-  width: 4.2rem;
-  height: 1.5rem;
+  width: 3rem;
+  height: 2rem;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
-  margin-top: 2rem;
   text-align: center;
   font-size: 0.7rem;
   background: none;
   border: none;
-  background-color: rgb(61, 36, 65);
+  background-color: rgba(148, 142, 145, 0.192);
   color: white;
   border-radius: 2px;
-  box-shadow: 1px 2px 2px gray;
+  box-shadow: 2px 2px 2px gray;
+  cursor: pointer;
+  transition: all 100ms ease;
+  top: 0;
+  right: 0;
+}
+
+.BtnDelete:hover {
+  transform: scale(0.95);
+  background-color: rgba(255, 0, 0, 0.658);
 }
 
 @media screen and (max-width: 80rem) {
-  .card_name {
-    display: flex;
-    width: 50%;
-    height: 1.5rem;
-    margin: 0.5rem;
-    align-items: center;
-    justify-content: center;
+  .card_name,
+  .theme,
+  .deck {
+    border: none;
   }
 
-  .cardname_input {
-    width: 15rem;
+  .champion_title,
+  .item_title {
+    margin: 0.2rem;
+    font-size: 0.75rem;
   }
 
-  .BtnInsert {
-    display: flex;
-    width: 2.5rem;
-    height: 1.3rem;
-    margin: 0.3rem;
-    font-size: 0.5rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .form {
-    width: 30rem;
-    height: 20rem;
-    display: flex;
-    flex-direction: column;
-    margin: 0 0.4rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .cardname_input {
-    display: flex;
-    width: 5rem;
+  .BtnDelete {
     height: 1.2rem;
-    margin: 0 0.3rem;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  .card_name,
+  .theme,
+  .deck {
+    border: none;
   }
 
-  .theme {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 20%;
-    align-items: center;
-  }
-
-  .theme_title {
-    font-size: 0.8rem;
-    font-family: "nanum_bold";
-    margin: 0;
-    margin-bottom: 0.3rem;
-  }
-
-  .theme_select {
+  .cardname_input {
     width: 7rem;
   }
 
-  .deck {
-    margin: 0;
-    height: 25%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 0.3rem;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .deck1_title,
-  .deck2_title {
-    font-family: "nanum_bold";
-    font-size: 0.8rem;
-    margin: 0;
-    margin: 0.2rem;
-  }
-
   .champion {
-    height: 10%;
+    height: 6rem;
+    width: 17rem;
+  }
+
+  .item {
+    height: 6rem;
+    width: 17rem;
+  }
+
+  .champion_title,
+  .item_title {
+    font-size: 0.7rem;
     margin: 0;
+    margin: 0.1rem 0;
+  }
+  .cham_name {
+    margin: 0.1rem;
+  }
+
+  .item_img {
+    margin: 0.15rem;
   }
 }

@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
-import Firebase from "firebase";
+import React, { useRef, useState } from "react";
 import styles from "./champion.module.css";
 import "./dropdown_menu.css";
 import CHAMPION_IMAGES from "../../image/index_image.js";
 import { AiOutlinePlusSquare } from "react-icons/ai";
 
-const Champion = React.forwardRef((props, ref) => {
+const Champion = React.forwardRef((ref) => {
   const dropdownRef = useRef(null);
   const [active, setActive] = useState(false);
   const [imgsrc, setImgSrc] = useState("");

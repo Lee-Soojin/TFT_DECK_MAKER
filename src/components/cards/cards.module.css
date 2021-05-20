@@ -1,6 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 .card {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: url(../../image/home_main_img2.jpg);
 }
 
 .card_board {
@@ -9,25 +16,35 @@
   width: 100%;
   max-width: 80rem;
   height: 100%;
-  background-image: url(../../image/background_gradient.jpg);
+  /* background-image: url(../../image/background_gradient.jpg); */
+  background-color: rgba(255, 255, 255, 0.336);
   overflow: auto;
   margin: 0 auto;
+  margin-top: 0.9rem;
 }
 
 .header {
+  display: flex;
   width: 100%;
+  height: 112px;
 }
 
 .card_maker {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   height: 100%;
-  overflow-y: inherit;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .card_container {
-  width: 30rem;
-  height: 15rem;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .footer {
@@ -43,12 +60,20 @@
 @media screen and (max-width: 80rem) {
   .card_board {
     flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
-  .card_maker,
-  .card_container {
-    width: 100%;
+  .card_maker {
+    width: 90%;
     height: 50%;
-    overflow-y: auto;
+    margin-bottom: 1rem;
+    padding-top: 1.5rem;
+  }
+
+  .card_container {
+    width: 90%;
+    height: 50%;
   }
 }

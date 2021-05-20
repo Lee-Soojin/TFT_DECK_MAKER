@@ -2,11 +2,8 @@ import React, { useEffect, useState } from "react";
 import styles from "./cards.module.css";
 import Header from "../header/header";
 import CardMaker from "../card_maker/card_maker";
-import Footer from "../footer/footer";
 import CardContainer from "../card_container/card_container";
 import { useHistory } from "react-router";
-import CHAMPION_IMAGES from "../../image/index_image.js";
-import ITEM_IMAGES from "../../image/item";
 
 const Cards = ({ authService, cardRepository }) => {
   const History = useHistory();

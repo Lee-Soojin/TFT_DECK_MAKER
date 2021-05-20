@@ -124,11 +124,3 @@
   justify-content: center;
   margin-top: 40%;
 }
-
-@media screen and (max-width: 80rem) {
-  .card {
-    width: 60%;
-    justify-content: center;
-    margin: 0 auto;
-  }
-}

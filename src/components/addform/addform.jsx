@@ -1,8 +1,6 @@
 import React, { useRef, useState } from "react";
 import styles from "./addform.module.css";
 import Item from "../item/item.jsx";
-import { AiOutlinePlusSquare } from "react-icons/ai";
-import CHAMPION_IMAGES from "../../image/index_image.js";
 import "../champion/dropdown_menu.css";
 import SelectChampion from "../select_champion/select_champion";
 

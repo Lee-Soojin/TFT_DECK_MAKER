@@ -1,11 +1,5 @@
 import React, { useRef } from "react";
 import styles from "./card_editor.module.css";
-import Champion from "../champion/champion.jsx";
-import CardName from "../cardName/cardname.jsx";
-import Deck from "../deck/deck";
-import Item from "../item/item.jsx";
-import SelectChampion from "../select_champion/select_champion";
-import Select from "react-select";
 
 const CardEditor = ({ card, updateCard, deleteCard }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
@@ -13,76 +7,7 @@ const CardEditor = ({ card, updateCard, deleteCard }) => {
   const themeRef = useRef();
   const deck1Ref = useRef();
   const deck2Ref = useRef();
-  const chamRef = useRef();
   console.log(cham);
-
-  const chamOptions = [
-    { value: "Kalista", label: "Kalista" },
-    { value: "Brand", label: "Brand" },
-    { value: "Nunu", label: "Nunu" },
-    { value: "Ryze", label: "Ryze" },
-    { value: "Lissandra", label: "Lissandra" },
-    { value: "Leblanc", label: "Leblanc" },
-    { value: "Morgana", label: "Morgana" },
-    { value: "Gragas", label: "Gragas" },
-    { value: "Khazix", label: "Khazix" },
-    { value: "Soraka", label: "Soraka" },
-    { value: "Nidalee", label: "Nidalee" },
-    { value: "Riven", label: "Riven" },
-    { value: "Karma", label: "Karma" },
-    { value: "Garen", label: "Garen" },
-    { value: "Udyr", label: "Udyr" },
-    { value: "Sett", label: "Sett" },
-    { value: "Ashe", label: "Ashe" },
-    { value: "Zyra", label: "Zyra" },
-    { value: "Heimerdinger", label: "Heimerdinger" },
-    { value: "Trundle", label: "Trundle" },
-    { value: "Pantheon", label: "Pantheon" },
-    { value: "Diana", label: "Diana" },
-    { value: "Mordekaiser", label: "Mordekaiser" },
-    { value: "Kindred", label: "Kindred" },
-    { value: "Warwick", label: "Warwick" },
-    { value: "Vayne", label: "Vayne" },
-    { value: "Hecarim", label: "Hecarim" },
-    { value: "Thresh", label: "Thresh" },
-    { value: "Viktor", label: "Viktor" },
-    { value: "Katarina", label: "Katarina" },
-    { value: "Draven", label: "Draven" },
-    { value: "Viego", label: "Viego" },
-    { value: "Kled", label: "Kled" },
-    { value: "Poppy", label: "Poppy" },
-    { value: "Ziggs", label: "Ziggs" },
-    { value: "Kennen", label: "Kennen" },
-    { value: "Lulu", label: "Lulu" },
-    { value: "Teemo", label: "Teemo" },
-    { value: "Nautilus", label: "Nautilus" },
-    { value: "Jax", label: "Jax" },
-    { value: "Rell", label: "Rell" },
-    { value: "Vladimir", label: "Vladimir" },
-    { value: "Sejuani", label: "Sejuani" },
-    { value: "Leesin", label: "Leesin" },
-    { value: "Yasuo", label: "Yasuo" },
-    { value: "Aphelios", label: "Aphelios" },
-    { value: "Darius", label: "Darius" },
-    { value: "Aatrox", label: "Aatrox" },
-    { value: "Leona", label: "Leona" },
-    { value: "Syndra", label: "Syndra" },
-    { value: "Varus", label: "Varus" },
-    { value: "Lux", label: "Lux" },
-    { value: "Rell", label: "Rell" },
-    { value: "Velkoz", label: "Velkoz" },
-    { value: "Kayle", label: "Kayle" },
-    { value: "Nocturn", label: "Nocturn" },
-    { value: "Ivern", label: "Ivern" },
-    { value: "Volibear", label: "Volibear" },
-    { value: "Ashe", label: "Ashe" },
-    { value: "Taric", label: "Taric" },
-    { value: "Diana", label: "Diana" },
-    { value: "Garen", label: "Garen" },
-    { value: "Morgana", label: "Morgana" },
-    { value: "Ryze", label: "Ryze" },
-    { value: "Heimerdinger", label: "Heimerdinger" },
-  ];
 
   const onChange = (event) => {
     if (event.currentTarget == null) {
@@ -227,13 +152,13 @@ const CardEditor = ({ card, updateCard, deleteCard }) => {
           {item &&
             item.map((Item) => (
               <div className={styles.item_container}>
-                <img src={Item} className={styles.item_img}></img>
+                <img src={Item} className={styles.item_img} alt="item"></img>
               </div>
             ))}
         </div>
         <div className={styles.deleteBtn_container}>
           <button className={styles.BtnDelete} onClick={onClick}>
-            카드 삭제
+            삭제❌
           </button>
         </div>
       </form>

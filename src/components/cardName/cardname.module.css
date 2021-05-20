@@ -14,18 +14,3 @@
   height: 1.5rem;
   margin-left: 0.5rem;
 }
-
-@media screen and (max-width: 80rem) {
-  .cardname_input {
-    width: 8rem;
-    margin-left: 1.2rem;
-  }
-
-  .cardname_input::placeholder {
-    font-size: 0.5rem;
-  }
-
-  .BtnInsert {
-    margin-left: 0.2rem;
-  }
-}
