@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   background-color: white;
-  border-radius: 0.5rem;
   width: 27.5rem;
   height: 35rem;
   box-shadow: 0 1px 8px gray;
@@ -18,8 +17,8 @@
   opacity: 1;
   visibility: visible;
   transform: translateY(3rem);
-  width: 15rem;
-  height: 33rem;
+  width: 14.5rem;
+  height: 45rem;
 }
 
 .Item_Container.invisible {

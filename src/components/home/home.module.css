@@ -12,11 +12,17 @@
   src: url(../../font/GmarketSansLight.otf);
 }
 
+@font-face {
+  font-family: "Sans_medium";
+  src: url(../../font/GmarketSansMedium.otf);
+}
+
 .Home {
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .header {
@@ -52,9 +58,10 @@
   display: flex;
   flex-direction: row;
   position: relative;
-  width: 100%;
+  width: 300vw;
   height: 840px;
   background-color: rgba(0, 0, 0, 0.925);
+  overflow: hidden;
 }
 
 .BtnPrevious {
@@ -84,12 +91,16 @@
   flex-direction: row;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
-.Slide1 {
+.Slide1,
+.Slide2,
+.Slide3 {
+  position: relative;
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 100vw;
   height: 100%;
 }
 
@@ -99,21 +110,68 @@
   vertical-align: middle;
 }
 
-.slide1_description {
+.slide2_Img_container {
   display: flex;
+  width: 40%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide2Img {
+  display: flex;
+  vertical-align: middle;
+  margin-left: 2rem;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide1_title,
+.slide2_title {
+  color: white;
+  font-family: "Sans_bold";
+  font-size: 3rem;
+  margin: 1rem 0;
+}
+
+.slide1_description,
+.slide2_description {
+  display: flex;
+  flex-direction: column;
   width: 60%;
   text-align: center;
   height: 50%;
   vertical-align: middle;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
 }
 
-.slide1_title {
-  color: white;
-  font-family: "Sans_bold";
-  font-size: 3rem;
+.description1_img {
+  width: 25rem;
+}
+
+.description2_img {
+  width: 20rem;
+}
+
+.description1_text,
+.description2_text {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: "Sans_medium";
+  width: 25rem;
+  white-space: normal;
+}
+
+.description2_text {
+  width: 29rem;
+}
+
+.text_content {
+  margin: 0;
+  text-align: left;
 }
 
 .footer {
