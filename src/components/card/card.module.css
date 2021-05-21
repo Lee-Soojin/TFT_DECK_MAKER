@@ -12,6 +12,11 @@
   src: url(../../font/Friz\ Quadrata\ Italic.ttf);
 }
 
+@font-face {
+  font-family: "Sans_medium";
+  src: url(../../font/GmarketSansMedium.otf);
+}
+
 li {
   list-style: none;
 }
@@ -54,9 +59,9 @@ li {
 }
 
 .card_name {
-  font-family: "lol_regular";
+  font-family: "Sans_medium";
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .deck1,

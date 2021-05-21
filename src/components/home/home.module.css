@@ -3,24 +3,20 @@
 }
 
 @font-face {
-  font-family: "lol_bold";
-  src: url(../../font/Friz\ Quadrata\ Bold.otf);
+  font-family: "Sans_bold";
+  src: url(../../font/GmarketSansMedium.otf);
 }
 
 @font-face {
-  font-family: "nanum_regular";
-  src: url(../../font/NanumGothic-Regular.ttf);
-}
-
-@font-face {
-  font-family: "nanum_bold";
-  src: url(../../font/NanumGothic-Bold.ttf);
+  font-family: "Sans_light";
+  src: url(../../font/GmarketSansLight.otf);
 }
 
 .Home {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
 }
 
 .header {
@@ -34,8 +30,10 @@
 }
 
 .Logo {
-  font-family: "nanum_bold";
-  font-size: 2.5rem;
+  font-family: "Sans_bold";
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  vertical-align: middle;
 }
 
 .BtnLogout {
@@ -51,26 +49,71 @@
 }
 
 .Home_About {
+  display: flex;
+  flex-direction: row;
+  position: relative;
   width: 100%;
   height: 840px;
-  background-image: url(../../image/home_main_img2.jpg);
+  background-color: rgba(0, 0, 0, 0.925);
 }
 
-.homeimg1 {
-  width: 40rem;
+.BtnPrevious {
+  display: flex;
+  top: 40%;
+  left: 1rem;
+  position: absolute;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.BtnNext {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.Slide1 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.slide1Img {
+  display: flex;
+  width: 40%;
+  vertical-align: middle;
+}
+
+.slide1_description {
+  display: flex;
+  width: 60%;
+  text-align: center;
+  height: 50%;
+  vertical-align: middle;
   align-items: center;
   justify-content: center;
-  animation: motion 900ms linear 0s infinite alternate;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
-@keyframes motion {
-  0% {
-    margin-top: 2rem;
-  }
-  100% {
-    margin-top: 3.7rem;
-  }
+.slide1_title {
+  color: white;
+  font-family: "Sans_bold";
+  font-size: 3rem;
 }
 
 .footer {
