@@ -9,23 +9,25 @@ import description3_img1 from "../../image/signup_page_img.png";
 import description3_img2 from "../../image/login_page_img.png";
 
 const Home = () => {
-  const [slide1, setSlide1] = useState(false);
-  const [slide2, setSlide2] = useState(false);
-  const [slide3, setSlide3] = useState(false);
+  // const [slide1, setSlide1] = useState(false);
+  // const [slide2, setSlide2] = useState(false);
+  // const [slide3, setSlide3] = useState(false);
+  const [slide, setSlide] = useState("slide1");
 
   const handleBtnSlide1 = (e) => {
     e.preventDefault();
-    setSlide1(!slide1);
+    // setSlide1(!slide1);
+    setSlide("slide1");
   };
 
   const handleBtnSlide2 = (e) => {
     e.preventDefault();
-    setSlide2(!slide2);
+    setSlide("slide2");
   };
 
   const handleBtnSlide3 = (e) => {
     e.preventDefault();
-    setSlide3(!slide3);
+    setSlide("slide3");
   };
 
   return (
@@ -35,9 +37,15 @@ const Home = () => {
         <button className={styles.BtnLogout}>Logout</button>
       </header>
       <section
-        className={`Home_About ${slide1 ? "slide1" : "slide1"} ${
-          slide2 ? "slide2" : "slide1"
-        } ${slide3 ? "slide3" : "slide1"}`}
+        className={`Home_About ${
+          slide === "slide1"
+            ? "slide1"
+            : slide === "slide2"
+            ? "slide2"
+            : slide === "slide3"
+            ? "slide3"
+            : "slide1"
+        } `}
       >
         <div className={styles.slides}>
           <div className={styles.Slide1}>
@@ -126,19 +134,19 @@ const Home = () => {
               </div>
             </section>
           </div>
-          <div className={styles.BtnSlide_container}>
-            <button className={styles.BtnSlide1} onClick={handleBtnSlide1}>
-              1
-            </button>
-            <button className={styles.BtnSlide2} onClick={handleBtnSlide2}>
-              2
-            </button>
-            <button className={styles.BtnSlide3} onClick={handleBtnSlide3}>
-              3
-            </button>
-          </div>
         </div>
       </section>
+      <div className={styles.BtnSlide_container}>
+        <button className={styles.BtnSlide1} onClick={handleBtnSlide1}>
+          1
+        </button>
+        <button className={styles.BtnSlide2} onClick={handleBtnSlide2}>
+          2
+        </button>
+        <button className={styles.BtnSlide3} onClick={handleBtnSlide3}>
+          3
+        </button>
+      </div>
       <footer className={styles.footer}>My deck card Maker</footer>
     </div>
   );
