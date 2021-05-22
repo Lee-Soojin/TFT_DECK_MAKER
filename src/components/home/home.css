@@ -1,0 +1,21 @@
+.Home_About {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 300vw;
+  height: 840px;
+  background-color: rgba(0, 0, 0, 0.925);
+  overflow: hidden;
+}
+
+.Home_About.slide1 {
+  transform: translate(0);
+}
+
+.Home_About.slide2 {
+  transform: translate(-100vw);
+}
+
+.Home_About.slide3 {
+  transform: translate(-200vw);
+}

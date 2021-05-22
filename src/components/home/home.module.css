@@ -64,7 +64,12 @@
   overflow: hidden;
 }
 
-.BtnPrevious {
+.Home_About.next {
+  transform: translate(-100vw);
+}
+
+.BtnPrevious,
+.BtnPrevious_Slide2 {
   display: flex;
   top: 40%;
   left: 1rem;
@@ -75,6 +80,8 @@
   cursor: pointer;
 }
 
+.BtnNext_Slide1,
+.BtnNext_Slide2,
 .BtnNext {
   display: flex;
   position: absolute;
@@ -89,6 +96,7 @@
 .slides {
   display: flex;
   flex-direction: row;
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -128,7 +136,8 @@
 }
 
 .slide1_title,
-.slide2_title {
+.slide2_title,
+.slide3_title {
   color: white;
   font-family: "Sans_bold";
   font-size: 3rem;
@@ -156,8 +165,14 @@
   width: 20rem;
 }
 
+.description3_img1,
+.description3_img2 {
+  width: 20rem;
+}
+
 .description1_text,
-.description2_text {
+.description2_text,
+.description3_text {
   font-size: 1rem;
   color: rgba(255, 255, 255, 0.87);
   font-family: "Sans_medium";
@@ -168,10 +183,47 @@
 .description2_text {
   width: 29rem;
 }
+.description3_text {
+  width: 14rem;
+}
+
+.slide3_description1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slide3_description2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
 
 .text_content {
   margin: 0;
   text-align: left;
+}
+
+.BtnSlide_container {
+  display: flex;
+  flex-direction: row;
+  z-index: 100;
+  position: fixed;
+  bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50rem;
+}
+
+.BtnSlide1,
+.BtnSlide2,
+.BtnSlide3 {
+  /* position: fixed; */
+  color: white;
+  background-color: transparent;
+  border-radius: 50%;
+  border: none;
+  margin: 1rem;
 }
 
 .footer {
