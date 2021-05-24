@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./home.module.css";
 import "./home.css";
+import headerTitle from "../../image/home_header_title.png";
 import slide1Img from "../../image/Garen.png";
 import slide2Img from "../../image/slide_img2.png";
 import slide3Img from "../../image/slide_img3.png";
@@ -48,7 +49,8 @@ const Home = () => {
   return (
     <div className={styles.Home}>
       <header className={styles.header}>
-        <h1 className={styles.Logo}>My Deck Card</h1>
+        {/* <h1 className={styles.Logo}>My Deck Card</h1> */}
+        <img src={headerTitle} alt="header title" className={styles.Logo} />
         <button className={styles.BtnLogout}>Logout</button>
       </header>
       <section
