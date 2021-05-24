@@ -25,7 +25,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-color: black;
+  background-image: url(../../image/background_image.jpg);
   -ms-overflow-style: none;
 }
 
@@ -51,16 +51,33 @@
   vertical-align: middle;
 }
 
+@keyframes logout_color {
+  from {
+    background-color: black;
+  }
+  to {
+    background-color: white;
+  }
+}
+
 .BtnLogout {
+  font-family: "Sans_medium";
   position: absolute;
   width: 5rem;
   height: 1.5rem;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
   border: none;
   background-color: transparent;
   background-color: black;
   color: white;
-  right: 1rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.BtnLogout:hover {
+  background-color: white;
+  color: black;
+  animation: logout_color linear 1s;
 }
 
 .Home_About {
@@ -69,7 +86,7 @@
   position: relative;
   width: 300vw;
   height: 640px;
-  background-color: rgba(0, 0, 0, 0.925);
+  background: transparent;
   overflow: hidden;
 }
 
@@ -240,4 +257,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+image {
+  background-color: transparent;
 }

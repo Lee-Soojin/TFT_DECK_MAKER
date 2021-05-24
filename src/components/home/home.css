@@ -30,7 +30,7 @@
   position: relative;
   width: 300vw;
   height: 840px;
-  background-color: rgba(0, 0, 0, 0.925);
+  background: transparent;
   overflow: hidden;
 }
 
