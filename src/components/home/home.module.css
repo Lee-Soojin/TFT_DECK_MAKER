@@ -2,6 +2,8 @@
   box-sizing: border-box;
 }
 
+/* font */
+
 @font-face {
   font-family: "Sans_bold";
   src: url(../../font/GmarketSansMedium.otf);
@@ -24,6 +26,11 @@
   height: 100%;
   overflow: hidden;
   background-color: black;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .header {
@@ -61,7 +68,7 @@
   flex-direction: row;
   position: relative;
   width: 300vw;
-  height: 840px;
+  height: 640px;
   background-color: rgba(0, 0, 0, 0.925);
   overflow: hidden;
 }
@@ -89,12 +96,6 @@
   height: 100%;
 }
 
-.slide1Img {
-  display: flex;
-  width: 40%;
-  vertical-align: middle;
-}
-
 .slide2_Img_container,
 .slide3_Img_container {
   display: flex;
@@ -102,20 +103,6 @@
   height: 100%;
   align-items: center;
   justify-content: center;
-}
-
-.slide2Img,
-.slide3Img {
-  display: flex;
-  vertical-align: middle;
-  margin-left: 2rem;
-  height: 40rem;
-  align-items: center;
-  justify-content: center;
-}
-
-.slide3Img {
-  height: 35rem;
 }
 
 .slide1_title,
@@ -218,12 +205,13 @@
   flex-direction: row;
   z-index: 100;
   position: fixed;
-  bottom: 3rem;
+  bottom: 5rem;
   left: 43%;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin: 0 auto;
+  height: 2rem;
 }
 
 .BtnSlide1,
@@ -234,8 +222,10 @@
   background-color: transparent;
   border-radius: 50%;
   border: none;
-  margin: 2rem;
+  margin: 0.5rem 1rem;
   cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 .BtnSlide1:hover,
 .BtnSlide2:hover,
@@ -245,7 +235,7 @@
 }
 
 .footer {
-  height: 120px;
+  height: 2.3rem;
   bottom: 0;
   align-items: center;
   justify-content: center;

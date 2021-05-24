@@ -11,26 +11,27 @@ import description3_img2 from "../../image/login_page_img.png";
 import { useHistory } from "react-router";
 
 const Home = () => {
-  // const [slide1, setSlide1] = useState(false);
-  // const [slide2, setSlide2] = useState(false);
-  // const [slide3, setSlide3] = useState(false);
   const [slide, setSlide] = useState("slide1");
+  const [fadein, setFadein] = useState("off");
   const history = useHistory();
 
   const handleBtnSlide1 = (e) => {
     e.preventDefault();
-    // setSlide1(!slide1);
     setSlide("slide1");
+    setFadein("on");
+    console.log(fadein);
   };
 
   const handleBtnSlide2 = (e) => {
     e.preventDefault();
     setSlide("slide2");
+    setFadein("on");
   };
 
   const handleBtnSlide3 = (e) => {
     e.preventDefault();
     setSlide("slide3");
+    setFadein("on");
   };
 
   const handleBtnGotoCard = (e) => {
@@ -38,6 +39,10 @@ const Home = () => {
     history.push({
       pathname: "/login",
     });
+  };
+
+  const AnimationEnd = () => {
+    setFadein("off");
   };
 
   return (
@@ -59,8 +64,16 @@ const Home = () => {
       >
         <div className={styles.slides}>
           <div className={styles.Slide1}>
-            <img src={slide1Img} alt="Garen" className={styles.slide1Img} />
-            <section className={styles.slide1_description}>
+            <img
+              src={slide1Img}
+              alt="Garen"
+              className={`slide1Img${fadein === "on" ? "on" : "off"}`}
+              onAnimationEnd={AnimationEnd}
+              fadein={fadein}
+            />
+            <section
+              className={`slide1_description${fadein === "on" ? "on" : "off"}`}
+            >
               <h1 className={styles.slide1_title}>나만의 덱을 저장하세요</h1>
               <img
                 src={description1_img}
@@ -83,19 +96,19 @@ const Home = () => {
                 지금 바로 덱 카드 만들기!
               </button>
             </section>
-            {/* <button className={styles.BtnNext_Slide1}>Next ▶</button> */}
           </div>
           <div className={styles.Slide2}>
-            {/* <button className={styles.BtnPrevious_Slide2}>◀ Prev</button> */}
-            <div className={styles.slide2_Img_container}>
-              <img
-                src={slide2Img}
-                alt="second_Slide"
-                className={styles.slide2Img}
-              />
-            </div>
+            <img
+              src={slide2Img}
+              alt="second_Slide"
+              className={`slide2Img${fadein === "on" ? "on" : "off"}`}
+              onAnimationEnd={AnimationEnd}
+              fadein={fadein}
+            />
 
-            <section className={styles.slide2_description}>
+            <section
+              className={`slide2_description${fadein === "on" ? "on" : "off"}`}
+            >
               <h1 className={styles.slide2_title}>
                 완전한 덱 카드를 생성해보세요
               </h1>
@@ -113,17 +126,26 @@ const Home = () => {
                   추가하세요 카드의 테마도 변경할 수 있어요
                 </p>
               </div>
+              <button
+                className={styles.BtnGotoCardPage}
+                onClick={handleBtnGotoCard}
+              >
+                지금 바로 덱 카드 만들기!
+              </button>
             </section>
           </div>
+          {/* slide3 */}
           <div className={styles.Slide3}>
-            <div className={styles.slide3_Img_container}>
-              <img
-                src={slide3Img}
-                alt="second_Slide"
-                className={styles.slide3Img}
-              />
-            </div>
-            <section className={styles.slide3_description}>
+            <img
+              src={slide3Img}
+              alt="second_Slide"
+              className={`slide3Img${fadein === "on" ? "on" : "off"}`}
+              onAnimationEnd={AnimationEnd}
+              fadein={fadein}
+            />
+            <section
+              className={`slide3_description${fadein === "on" ? "on" : "off"}`}
+            >
               <h1 className={styles.slide3_title}>
                 간편한 회원가입과 로그인으로 시작하세요
               </h1>
@@ -152,6 +174,12 @@ const Home = () => {
                   </p>
                 </div>
               </div>
+              <button
+                className={styles.BtnGotoCardPage}
+                onClick={handleBtnGotoCard}
+              >
+                지금 바로 덱 카드 만들기!
+              </button>
             </section>
           </div>
         </div>

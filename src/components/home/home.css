@@ -1,3 +1,29 @@
+/* animation */
+
+@keyframes Img_slidein {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes description_slidein {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* styling */
+
 .Home_About {
   display: flex;
   flex-direction: row;
@@ -18,4 +44,97 @@
 
 .Home_About.slide3 {
   transform: translate(-200vw);
+}
+
+.slide1Imgoff,
+.slide2Imgoff,
+.slide3Imgoff {
+  display: flex;
+  width: 40%;
+  vertical-align: middle;
+}
+
+.slide2Imgoff,
+.slide3Imgoff {
+  display: flex;
+  vertical-align: middle;
+  margin-left: 2rem;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide1Imgon,
+.slide2Imgon,
+.slide3Imgon {
+  display: flex;
+  width: 40%;
+  animation-delay: 200ms;
+  animation: Img_slidein 3s;
+}
+
+.slide2Imgon,
+.slide3Imgon {
+  display: flex;
+  vertical-align: middle;
+  margin-left: 2rem;
+  height: 40rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide1Imgoff,
+.slide1Imgon {
+  margin: auto 0;
+  margin-left: 5rem;
+}
+
+.slide2Imgon {
+  animation: Img_slidein 3.5s;
+  margin: auto 0;
+  margin-left: 4rem;
+}
+
+.slide2Imgoff {
+  margin: auto 0;
+  margin-left: 4rem;
+}
+
+.slide3Imgoff,
+.slide3Imgon {
+  width: 35rem;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  margin: auto 1rem;
+  margin-left: 6rem;
+}
+
+.slide1_descriptionoff,
+.slide2_descriptionoff,
+.slide3_descriptionoff {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: center;
+  height: 50%;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+}
+
+.slide1_descriptionon,
+.slide2_descriptionon,
+.slide3_descriptionon {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  text-align: center;
+  height: 50%;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  animation: description_slidein 3s;
 }
