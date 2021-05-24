@@ -3,16 +3,19 @@ import styles from "./home.module.css";
 import "./home.css";
 import slide1Img from "../../image/Garen.png";
 import slide2Img from "../../image/slide_img2.png";
+import slide3Img from "../../image/slide_img3.png";
 import description1_img from "../../image/slide_descript_img1.png";
 import description2_img from "../../image/slide_descript_img2.png";
 import description3_img1 from "../../image/signup_page_img.png";
 import description3_img2 from "../../image/login_page_img.png";
+import { useHistory } from "react-router";
 
 const Home = () => {
   // const [slide1, setSlide1] = useState(false);
   // const [slide2, setSlide2] = useState(false);
   // const [slide3, setSlide3] = useState(false);
   const [slide, setSlide] = useState("slide1");
+  const history = useHistory();
 
   const handleBtnSlide1 = (e) => {
     e.preventDefault();
@@ -28,6 +31,13 @@ const Home = () => {
   const handleBtnSlide3 = (e) => {
     e.preventDefault();
     setSlide("slide3");
+  };
+
+  const handleBtnGotoCard = (e) => {
+    e.preventDefault();
+    history.push({
+      pathname: "/login",
+    });
   };
 
   return (
@@ -66,6 +76,12 @@ const Home = () => {
                   있습니다
                 </p>
               </div>
+              <button
+                className={styles.BtnGotoCardPage}
+                onClick={handleBtnGotoCard}
+              >
+                지금 바로 덱 카드 만들기!
+              </button>
             </section>
             {/* <button className={styles.BtnNext_Slide1}>Next ▶</button> */}
           </div>
@@ -98,12 +114,16 @@ const Home = () => {
                 </p>
               </div>
             </section>
-            {/* <button className={styles.BtnNext_Slide2}>Next ▶</button> */}
           </div>
           <div className={styles.Slide3}>
-            {/* <button className={styles.BtnPrevious}>◀ Prev</button> */}
-            <img src={slide1Img} alt="Garen" className={styles.slide1Img} />
-            <section className={styles.slide1_description}>
+            <div className={styles.slide3_Img_container}>
+              <img
+                src={slide3Img}
+                alt="second_Slide"
+                className={styles.slide3Img}
+              />
+            </div>
+            <section className={styles.slide3_description}>
               <h1 className={styles.slide3_title}>
                 간편한 회원가입과 로그인으로 시작하세요
               </h1>

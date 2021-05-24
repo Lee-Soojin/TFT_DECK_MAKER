@@ -23,22 +23,24 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: black;
 }
 
 .header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   align-items: center;
   text-align: center;
   justify-content: center;
+  color: white;
 }
 
 .Logo {
   font-family: "Sans_bold";
   font-size: 2rem;
-  margin: 0.5rem 0;
+  margin: 1rem 0;
   vertical-align: middle;
 }
 
@@ -68,31 +70,6 @@
   transform: translate(-100vw);
 }
 
-.BtnPrevious,
-.BtnPrevious_Slide2 {
-  display: flex;
-  top: 40%;
-  left: 1rem;
-  position: absolute;
-  background: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
-.BtnNext_Slide1,
-.BtnNext_Slide2,
-.BtnNext {
-  display: flex;
-  position: absolute;
-  top: 40%;
-  right: 1rem;
-  background: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-}
-
 .slides {
   display: flex;
   flex-direction: row;
@@ -118,7 +95,8 @@
   vertical-align: middle;
 }
 
-.slide2_Img_container {
+.slide2_Img_container,
+.slide3_Img_container {
   display: flex;
   width: 40%;
   height: 100%;
@@ -126,13 +104,18 @@
   justify-content: center;
 }
 
-.slide2Img {
+.slide2Img,
+.slide3Img {
   display: flex;
   vertical-align: middle;
   margin-left: 2rem;
   height: 40rem;
   align-items: center;
   justify-content: center;
+}
+
+.slide3Img {
+  height: 35rem;
 }
 
 .slide1_title,
@@ -144,8 +127,13 @@
   margin: 1rem 0;
 }
 
+.slide3_title {
+  font-size: 2.5rem;
+}
+
 .slide1_description,
-.slide2_description {
+.slide2_description,
+.slide3_description {
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -204,13 +192,34 @@
   text-align: left;
 }
 
+.BtnGotoCardPage {
+  background-color: transparent;
+  border: none;
+  color: white;
+  background-color: orange;
+  border-radius: 1rem;
+  height: 3rem;
+  width: 13rem;
+  margin-top: 1.5rem;
+  padding: 0.5rem;
+  align-items: center;
+  font-family: "Sans_bold";
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.BtnGotoCardPage:hover {
+  transform: scale(1.05);
+  background: linear-gradient(-34deg, rgb(255, 170, 0), rgb(251, 255, 0));
+}
+
 .BtnSlide_container {
   display: flex;
   flex-direction: row;
   z-index: 100;
   position: fixed;
   bottom: 3rem;
-  left: 40%;
+  left: 43%;
   align-items: center;
   justify-content: center;
   text-align: center;
