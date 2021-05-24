@@ -19,6 +19,13 @@
   src: url(../../font/NanumGothic-Bold.ttf);
 }
 
+.body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../image/signup_background.jpg);
+}
+
 .sign_container {
   display: flex;
   margin: auto;
@@ -41,6 +48,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.849);
 }
 
 .title {
