@@ -49,9 +49,10 @@ const Home = () => {
   return (
     <div className={styles.Home}>
       <header className={styles.header}>
-        {/* <h1 className={styles.Logo}>My Deck Card</h1> */}
         <img src={headerTitle} alt="header title" className={styles.Logo} />
-        <button className={styles.BtnLogout}>Logout</button>
+        <button className={styles.BtnLogin} onClick={handleBtnGotoCard}>
+          Login
+        </button>
       </header>
       <section
         className={`Home_About ${
