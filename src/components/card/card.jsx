@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import styles from "./card.module.css";
-import "../../image/index_image.js";
+// import "../../image/index_image.js";
 
-const Card = ({ card }) => {
+const Card = memo(({ card }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
 
   return (
@@ -37,7 +37,7 @@ const Card = ({ card }) => {
       </li>
     </section>
   );
-};
+});
 
 function getTheme(theme) {
   switch (theme) {

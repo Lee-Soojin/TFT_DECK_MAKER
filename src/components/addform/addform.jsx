@@ -1,10 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { memo, useRef, useState } from "react";
 import styles from "./addform.module.css";
 import Item from "../item/item.jsx";
-import "../champion/dropdown_menu.css";
 import SelectChampion from "../select_champion/select_champion";
 
-const AddForm = ({ onAdd }) => {
+const AddForm = memo(({ onAdd }) => {
   const [cham, setCham] = useState([]);
   const [item, setItem] = useState([]);
   const chamOptions = [
@@ -755,6 +754,6 @@ const AddForm = ({ onAdd }) => {
       </button>
     </form>
   );
-};
+});
 
 export default AddForm;
