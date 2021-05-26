@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import styles from "./signup.module.css";
 import SignUpImage from "../../image/tft_sign_up1_size.jpg";
 
 function SignUp({ authService }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const handleChange = (e) => {
     const type = e.target.name;
@@ -23,6 +24,9 @@ function SignUp({ authService }) {
         .signUp(email, password) //
         .then(console.log);
     }
+    history.push({
+      pathname: "/login",
+    });
   };
 
   const handleKeyPress = (e) => {
