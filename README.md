@@ -2,7 +2,7 @@
 
 추후에 보완되어 다시 배포될 수도 있음
 
-[링크] <https://60acf7040c6b5fe2b55b5ef4--tft-deck-maker.netlify.app>
+[링크] < https://60ae0a6fe8f9b7b5c17b7631--tft-deck-maker.netlify.app>
 
 ---
 
