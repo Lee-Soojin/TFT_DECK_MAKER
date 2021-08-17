@@ -1,6 +1,7 @@
 import styles from "./item.module.css";
 import "./item.css";
 import React, { useState } from "react";
+import { FaCaretSquareDown } from "react-icons/fa";
 
 const Item = ({ items, onChange }) => {
   const [visibility, setVisibility] = useState(false);
@@ -34,7 +35,7 @@ const Item = ({ items, onChange }) => {
     <div className={styles.Itemlist}>
       <p className={styles.item_title}>아이템 선택</p>
       <button className={styles.BtnShow_item_list} onClick={handleClick}>
-        🔽
+        <FaCaretSquareDown />
       </button>
       <div className={`Item_Container ${visibility ? "visible" : "invisible"}`}>
         {items &&

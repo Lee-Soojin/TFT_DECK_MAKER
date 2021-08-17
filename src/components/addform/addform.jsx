@@ -2,6 +2,7 @@ import React, { memo, useRef, useState } from "react";
 import styles from "./addform.module.css";
 import Item from "../item/item.jsx";
 import SelectChampion from "../select_champion/select_champion";
+import { FaFolderPlus } from "react-icons/fa";
 
 const AddForm = memo(({ onAdd }) => {
   const [cham, setCham] = useState([]);
@@ -750,7 +751,7 @@ const AddForm = memo(({ onAdd }) => {
         <Item items={items} onChange={handleItem} />
       </div>
       <button className={styles.BtnAdd} onClick={onSubmit}>
-        추가
+        <FaFolderPlus />
       </button>
     </form>
   );

@@ -3,15 +3,46 @@
   src: url(../../font/NanumGothic-Bold.ttf);
 }
 
+@font-face {
+  font-family: "ONE-Mobile-Title";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "paybooc-Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --addform-box-shadow: 0.2rem 0.2rem 0.4rem #c8d0e7,
+    -0.2rem -0.2rem 0.5rem #ffffff;
+  --select-box-shadow: inset 0.1rem 0.1rem 0.3rem #c8d0e7,
+    inset -0.2rem -0.2rem 0.5rem #ffffff;
+  --button-box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9,
+    7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001, inset 0px 0px 0px 0px #fff9,
+    inset 0px 0px 0px 0px #0001;
+  --addform-title-font-family: "ONE-Mobile-Title";
+  --addform-select-font-family: "paybooc-Light";
+}
+
 .form {
   width: 90%;
   height: 25rem;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   background-color: rgba(255, 255, 255, 0.164);
   border-radius: 0.5rem;
   margin: 1.5rem 0;
+  box-shadow: var(--addform-box-shadow);
 }
 
 .card_name {
@@ -27,7 +58,7 @@
 .name_title {
   display: flex;
   font-size: 0.8rem;
-  font-family: "nanum_bold";
+  font-family: var(--addform-title-font-family);
   align-items: center;
   justify-content: center;
 }
@@ -36,12 +67,12 @@
   display: flex;
   width: 9rem;
   border: none;
-  border-radius: 4px;
-  background-color: rgba(255, 255, 255, 0.616);
-  height: 1.2rem;
+  border-radius: 1rem;
+  height: 2rem;
   margin: 0 0.3rem;
   font-size: 0.8rem;
   text-align: center;
+  box-shadow: var(--select-box-shadow);
 }
 
 .cardname_input::placeholder {
@@ -67,12 +98,14 @@ option {
 
 .theme_title {
   font-size: 0.8rem;
-  font-family: "nanum_bold";
+  font-family: var(--addform-title-font-family);
 }
 
 .theme_select {
-  width: 6rem;
+  width: 6.5rem;
   padding: 0.3rem;
+  border-radius: 1rem;
+  box-shadow: var(--select-box-shadow);
 }
 
 .deck {
@@ -88,14 +121,16 @@ option {
 
 .deck1_title,
 .deck2_title {
-  font-family: "nanum_bold";
+  font-family: var(--addform-title-font-family);
   font-size: 0.8rem;
 }
 
 .deck1_select,
 .deck2_select {
-  width: 6rem;
+  width: 6.5rem;
   padding: 0.3rem;
+  border-radius: 1rem;
+  box-shadow: var(--select-box-shadow);
 }
 
 .champion,
@@ -106,7 +141,7 @@ option {
 }
 
 .champion_title {
-  font-family: "nanum_bold";
+  font-family: var(--addform-title-font-family);
   font-size: 0.8rem;
 }
 
@@ -124,6 +159,7 @@ option {
   height: 1rem;
   font-size: 0.8rem;
   margin: 0 0.5rem;
+  font-family: var(--addform-select-font-family);
 }
 
 select {
@@ -135,6 +171,7 @@ select {
   border: none;
   background-color: rgba(255, 255, 255, 0.274);
   color: rgb(58, 9, 58);
+  font-family: var(--addform-select-font-family);
 }
 
 .item {
@@ -146,29 +183,30 @@ select {
   height: 80%;
   align-items: center;
   text-align: center;
-  /* justify-content: center; */
 }
 
 .BtnAdd {
   display: flex;
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
   width: 3rem;
-  height: 1.5rem;
-  font-size: 0.8rem;
-  align-items: center;
-  justify-content: center;
+  height: 3rem;
+  font-size: 1.5rem;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  background-color: rgba(95, 97, 221, 0.521);
+  background: transparent;
   border: none;
-  border-radius: 4px;
-  color: white;
+  border-radius: 1rem;
+  box-shadow: var(--button-box-shadow);
+  color: black;
   cursor: pointer;
   transition: all 100ms ease;
 }
 
 .BtnAdd:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 @media screen and (max-width: 80rem) {

@@ -1,3 +1,15 @@
+:root {
+  --header-title-font-family: "Y_Spotlight";
+}
+
+@font-face {
+  font-family: "Y_Spotlight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -7,9 +19,9 @@
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 7rem;
-  /* background-image: url(../../image/background_gradient.jpg); */
+  height: 8rem;
   background-color: transparent;
+  font-size: 16px;
 }
 
 .header_img {
@@ -18,6 +30,11 @@
 
 .title_part {
   margin-top: 1rem 0;
+}
+
+.header_title {
+  font-size: 2.5rem;
+  font-family: var(--header-title-font-family);
 }
 
 .about {
