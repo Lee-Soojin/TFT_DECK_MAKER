@@ -2,12 +2,19 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "NEXON Lv2 Gothic Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .card {
   width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  background-image: url(../../image/home_main_img2.jpg);
 }
 
 .card_board {

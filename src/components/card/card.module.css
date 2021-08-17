@@ -3,18 +3,25 @@
 }
 
 @font-face {
-  font-family: "lol_regular";
-  src: url(../../font/Friz\ Quadrata\ Std\ Medium.otf);
+  font-family: "HeirofLightBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: "lol_italic";
-  src: url(../../font/Friz\ Quadrata\ Italic.ttf);
+  font-family: "MapoFlowerIsland";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: "Sans_medium";
-  src: url(../../font/GmarketSansMedium.otf);
+:root {
+  --card-title-font-family: "HeirofLightBold";
+  --card-chamname-font-family: "MapoFlowerIsland";
+  --card-box-shadow: 3px 3px 5px #c8d0e7;
 }
 
 li {
@@ -25,7 +32,7 @@ li {
   display: flex;
   max-width: 30rem;
   height: 15rem;
-  box-shadow: 8px 3px 3px rgba(128, 128, 128, 0.596);
+  box-shadow: var(--card-box-shadow);
   margin: 0 auto;
   border: 1px solid rgba(211, 211, 211, 0.466);
   background-color: white;
@@ -38,7 +45,7 @@ li {
 .card.space {
   display: flex;
   background-image: url(../../image/card_background_space.jpg);
-  font-family: "lol_regular";
+  font-family: var(--card-title-font-family);
   text-shadow: 1px 1px 2px rgb(36, 61, 71);
   color: black;
 }
@@ -47,28 +54,55 @@ li {
   display: flex;
   background-image: url(../../image/card_background_judge_black.jpg);
   color: white;
-  font-family: "lol_regular";
+  font-family: var(--card-title-font-family);
 }
 
 .card.cartel {
   display: flex;
   background-image: url(../../image/card_background_cartel.jpg);
-  font-family: "lol_regular";
+  font-family: var(--card-title-font-family);
   color: rgb(228, 198, 225);
   text-shadow: 1px 1px 2px black;
 }
 
+.card.galaxy {
+  display: flex;
+  background-image: url(../../image/theme/galaxy.jpg);
+  color: white;
+}
+
+.card.saved {
+  display: flex;
+  background-image: url(../../image/theme/saved.jpg);
+  background-position: center;
+  color: black;
+}
+
+.card.light {
+  display: flex;
+  background-image: url(../../image/theme/light.jpg);
+  background-position: center;
+  color: black;
+}
+
+.card.regenerative {
+  display: flex;
+  background-image: url(../../image/theme/regenerative.jpg);
+  background-position: center;
+  color: black;
+}
+
 .card_name {
-  font-family: "Sans_medium";
+  font-family: var(--card-title-font-family);
   margin: 0;
   font-size: 1.3rem;
 }
 
 .deck1,
 .deck2 {
-  font-family: "lol_italic";
+  font-family: var(--card-title-font-family);
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .item {
@@ -95,6 +129,8 @@ li {
   display: flex;
   font-size: 0.8rem;
   margin: 0.3rem;
+  font-family: var(--card-chamname-font-family);
+  font-weight: 700;
 }
 
 .champion_img {

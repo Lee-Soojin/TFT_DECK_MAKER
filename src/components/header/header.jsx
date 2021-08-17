@@ -12,9 +12,7 @@ const Header = memo(({ onLogout }) => {
         </Link>
       </div>
       <div className={styles.title_part}>
-        <div className={styles.header_title}>
-          <img src={TitleImg} alt="title" className={styles.header_img} />
-        </div>
+        <div className={styles.header_title}>DECK MAKER</div>
       </div>
       {true && (
         <button className={styles.BtnLogout} onClick={onLogout}>

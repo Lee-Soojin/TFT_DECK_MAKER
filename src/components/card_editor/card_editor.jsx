@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import styles from "./card_editor.module.css";
+import { TiDelete } from "react-icons/ti";
 
 const CardEditor = ({ card, updateCard, deleteCard }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
@@ -52,6 +53,10 @@ const CardEditor = ({ card, updateCard, deleteCard }) => {
             <option value="judge">judge</option>
             <option value="cartel">cartel</option>
             <option value="space">space</option>
+            <option value="galaxy">galaxy</option>
+            <option value="saved">saved</option>
+            <option value="light">light</option>
+            <option value="regenerative">regenerative</option>
           </select>
         </div>
         <div className={styles.deck}>
@@ -158,7 +163,7 @@ const CardEditor = ({ card, updateCard, deleteCard }) => {
         </div>
         <div className={styles.deleteBtn_container}>
           <button className={styles.BtnDelete} onClick={onClick}>
-            삭제❌
+            <TiDelete />
           </button>
         </div>
       </form>

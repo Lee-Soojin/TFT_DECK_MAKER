@@ -7,6 +7,27 @@
   src: url(../../font/NanumGothic-Bold.ttf);
 }
 
+@font-face {
+  font-family: "ONE-Mobile-Title";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-Title.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "paybooc-Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --item-title-font-family: "ONE-Mobile-Title";
+  --item-contents-font-family: "paybooc-Light";
+}
+
 .Itemlist {
   display: flex;
   flex-direction: column;
@@ -19,7 +40,7 @@
 .item_title,
 .item_select_title {
   font-size: 0.8rem;
-  font-family: "nanum_bold";
+  font-family: var(--item-title-font-family);
 }
 
 .BtnShow_item_list {
@@ -27,6 +48,8 @@
   border: none;
   cursor: pointer;
   margin: 0;
+  font-size: 1rem;
+  color: violet;
 }
 
 .BtnShow_item_list:hover {
@@ -83,16 +106,17 @@
 .BtnResetItem {
   width: 6rem;
   height: 1.5rem;
-  font-size: 0.7rem;
   align-items: center;
   margin: 0 auto;
   background: none;
   border: none;
   border-radius: 0.5rem;
-  background-color: rgba(245, 222, 179, 0.61);
+  background-color: white;
   margin-top: 2rem;
-  font-family: "nanum_bold";
-  box-shadow: 1px 2px 2px gray;
+  font-family: var(--item-contents-font-family);
+  font-weight: 700;
+  font-size: 0.7rem;
+  box-shadow: -0.5px -0.5px 1px rgba(128, 128, 128, 0.603), 2px 2px 2px gray;
   cursor: pointer;
 }
 

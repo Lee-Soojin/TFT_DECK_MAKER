@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import styles from "./card.module.css";
-// import "../../image/index_image.js";
 
 const Card = memo(({ card }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
@@ -47,6 +46,18 @@ function getTheme(theme) {
       return styles.judge;
     case "space":
       return styles.space;
+    case "default":
+      return styles.default;
+    case "polygon":
+      return styles.polygon;
+    case "saved":
+      return styles.saved;
+    case "galaxy":
+      return styles.galaxy;
+    case "light":
+      return styles.light;
+    case "regenerative":
+      return styles.regenerative;
     default:
       throw new Error(`unknow theme : ${theme}`);
   }
