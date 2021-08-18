@@ -1,5 +1,6 @@
 :root {
   --header-title-font-family: "Y_Spotlight";
+  --header-button-font-family: "Y_Spotlight";
 }
 
 @font-face {
@@ -20,8 +21,10 @@
   text-align: center;
   width: 100%;
   height: 8rem;
+  line-height: 8rem;
   background-color: transparent;
   font-size: 16px;
+  box-shadow: 4px 4px 8px lightgray;
 }
 
 .header_img {
@@ -35,26 +38,28 @@
 .header_title {
   font-size: 2.5rem;
   font-family: var(--header-title-font-family);
+  align-items: center;
+  margin: 1rem auto;
 }
 
 .about {
   position: absolute;
   left: 0;
   margin-left: 2rem;
-  color: white;
+  color: black;
 }
 
 .link_about {
-  color: white;
+  color: black;
   text-decoration: none;
-  font-size: 1.2rem;
   padding: 0.3rem;
   font-size: 1.3rem;
+  font-family: var(--header-button-font-family);
+  transition: all 0.2s ease;
 }
 
 .link_about:hover {
-  border: 2px inset rgba(255, 255, 255, 0.384);
-  border-radius: 1.5rem;
+  transform: scale(1.1);
 }
 
 .BtnLogout {
@@ -70,11 +75,11 @@
   justify-content: center;
   text-align: center;
   background: transparent;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.623);
+  font-family: var(--header-button-font-family);
+  font-size: 1rem;
+  color: black;
 }
 
 .BtnLogout:hover {
   transform: scale(1.1);
-  box-shadow: 2px 2px 2px 2px rgba(255, 255, 255, 0.397);
 }

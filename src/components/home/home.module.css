@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --header-title-font-family: "Y_Spotlight";
+}
+
 /* font */
 
 @font-face {
@@ -17,6 +21,14 @@
 @font-face {
   font-family: "Sans_medium";
   src: url(../../font/GmarketSansMedium.otf);
+}
+
+@font-face {
+  font-family: "Y_Spotlight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts-20-12@1.0/Y_Spotlight.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .Home {
@@ -37,18 +49,17 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 7rem;
+  height: 8rem;
   align-items: center;
   text-align: center;
   justify-content: center;
   color: white;
 }
 
-.Logo {
-  font-family: "Sans_bold";
-  height: 3.5rem;
-  margin: 2rem 0;
-  vertical-align: middle;
+.header_title {
+  font-family: var(--header-title-font-family);
+  font-size: 2.5rem;
+  margin: 1rem 0;
 }
 
 @keyframes logout_color {

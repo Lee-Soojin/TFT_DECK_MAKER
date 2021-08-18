@@ -72,7 +72,7 @@ const Cards = ({ authService, cardRepository }) => {
           <CardContainer cards={cards} />
         </div>
       </div>
-      <div className={styles.footer}>{/* <Footer /> */}</div>
+      <div className={styles.footer}></div>
     </div>
   );
 };

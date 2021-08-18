@@ -49,7 +49,7 @@ const Home = () => {
   return (
     <div className={styles.Home}>
       <header className={styles.header}>
-        <img src={headerTitle} alt="header title" className={styles.Logo} />
+        <h1 className={styles.header_title}>TFT DECK MAKER</h1>
         <button className={styles.BtnLogin} onClick={handleBtnGotoCard}>
           Login
         </button>
@@ -137,7 +137,7 @@ const Home = () => {
               </button>
             </section>
           </div>
-          {/* slide3 */}
+
           <div className={styles.Slide3}>
             <img
               src={slide3Img}

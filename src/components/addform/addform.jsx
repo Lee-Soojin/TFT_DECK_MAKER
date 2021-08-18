@@ -611,7 +611,6 @@ const AddForm = memo(({ onAdd }) => {
     formRef.current.reset();
     setCham([]);
     setItem([]);
-    // setItem([]);
     onAdd(card);
     console.log(cham);
     console.log(card);
@@ -632,7 +631,6 @@ const AddForm = memo(({ onAdd }) => {
   };
 
   const handleItem = (url) => {
-    // e.preventDefault();
     console.log("url:", url);
     const selecteditem = item.concat(...item, url);
     const Item = selecteditem.filter(

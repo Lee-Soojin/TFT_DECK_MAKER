@@ -44,7 +44,7 @@ li {
 
 .card.space {
   display: flex;
-  background-image: url(../../image/card_background_space.jpg);
+  background: url(../../image/card_background_space.jpg) center;
   font-family: var(--card-title-font-family);
   text-shadow: 1px 1px 2px rgb(36, 61, 71);
   color: black;
@@ -52,14 +52,14 @@ li {
 
 .card.judge {
   display: flex;
-  background-image: url(../../image/card_background_judge_black.jpg);
+  background: url(../../image/card_background_judge_black.jpg) center;
   color: white;
   font-family: var(--card-title-font-family);
 }
 
 .card.cartel {
   display: flex;
-  background-image: url(../../image/card_background_cartel.jpg);
+  background: url(../../image/card_background_cartel.jpg) center;
   font-family: var(--card-title-font-family);
   color: rgb(228, 198, 225);
   text-shadow: 1px 1px 2px black;
@@ -67,27 +67,27 @@ li {
 
 .card.galaxy {
   display: flex;
-  background-image: url(../../image/theme/galaxy.jpg);
+  background: url(../../image/theme/galaxy.jpg) center;
   color: white;
 }
 
 .card.saved {
   display: flex;
-  background-image: url(../../image/theme/saved.jpg);
+  background: url(../../image/theme/saved.jpg) center;
   background-position: center;
   color: black;
 }
 
 .card.light {
   display: flex;
-  background-image: url(../../image/theme/light.jpg);
+  background: url(../../image/theme/light.jpg) center;
   background-position: center;
   color: black;
 }
 
 .card.regenerative {
   display: flex;
-  background-image: url(../../image/theme/regenerative.jpg);
+  background: url(../../image/theme/regenerative.jpg) center;
   background-position: center;
   color: black;
 }

@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import styles from "./header.module.css";
-import TitleImg from "../../image/Header_title1.png";
 import { Link } from "react-router-dom";
 
 const Header = memo(({ onLogout }) => {
