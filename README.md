@@ -2,7 +2,7 @@
 
 추후에 보완되어 다시 배포될 수도 있음
 
-**tft deck card maker 링크 ⇒** <https://60ae0a6fe8f9b7b5c17b7631--tft-deck-maker.netlify.app>
+**tft deck card maker 링크 ⇒** <https://611d0822f65b800c21af8fe5--tft-deck-maker.netlify.app>
 
 ---
 
