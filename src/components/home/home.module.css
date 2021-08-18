@@ -37,7 +37,7 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url(../../image/background_image.jpg);
+  background-image: url(../../image/background_image_2.jpg);
   -ms-overflow-style: none;
 }
 
@@ -60,6 +60,7 @@
   font-family: var(--header-title-font-family);
   font-size: 2.5rem;
   margin: 1rem 0;
+  color: black;
 }
 
 @keyframes logout_color {
@@ -72,10 +73,10 @@
 }
 
 .BtnLogin {
-  font-family: "Sans_medium";
+  font-family: var(--header-title-font-family);
   position: absolute;
   width: 5rem;
-  height: 1.5rem;
+  height: 1.8rem;
   border-radius: 1rem;
   border: none;
   background-color: transparent;
@@ -109,9 +110,11 @@
   display: flex;
   flex-direction: row;
   position: relative;
+  margin: auto;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.466);
 }
 
 .Slide1,
@@ -136,7 +139,7 @@
 .slide1_title,
 .slide2_title,
 .slide3_title {
-  color: white;
+  color: black;
   font-family: "Sans_bold";
   font-size: 3rem;
   margin: 1rem 0;
@@ -177,7 +180,7 @@
 .description2_text,
 .description3_text {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.87);
+  color: black;
   font-family: "Sans_medium";
   width: 25rem;
   white-space: normal;
@@ -246,12 +249,14 @@
 .BtnSlide2,
 .BtnSlide3 {
   /* position: fixed; */
-  color: white;
+  color: black;
   background-color: transparent;
   border-radius: 50%;
   border: none;
   margin: 0.5rem 1rem;
   cursor: pointer;
+  font-size: 1rem;
+  font-family: var(--header-title-font-family);
   width: 1.5rem;
   height: 1.5rem;
 }
@@ -259,15 +264,6 @@
 .BtnSlide2:hover,
 .BtnSlide3:hover {
   background-color: white;
-  color: black;
-}
-
-.footer {
-  height: 2.3rem;
-  bottom: 0;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 image {

@@ -198,7 +198,6 @@ const Home = () => {
           3
         </button>
       </div>
-      <footer className={styles.footer}>My deck card Maker</footer>
     </div>
   );
 };
