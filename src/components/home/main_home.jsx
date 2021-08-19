@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./main_home.module.css";
-import mainImg from "../../image/Garen.png";
+import mainImg1 from "../../image/Garen.png";
+import mainImg2 from "../../image/home_img_2.png";
+import mainImg3 from "../../image/home_img_3.png";
+import textImg1 from "../../image/home_text_1.png";
+import textImg2 from "../../image/home_text_2.png";
 
 const MainHome = (props) => {
   return (
@@ -38,15 +42,19 @@ const MainHome = (props) => {
             cx="350"
             cy="350"
             r="300"
-            fill="#fff"
+            fill="#12005e"
             filter="url(#inset-shadow)"
           />
         </svg>
-        <img src={mainImg} alt="main " className={styles.home_img1} />
+        <div className={styles.home_image_container}>
+          <img src={mainImg3} alt="main " className={styles.home_img3} />
+          <img src={mainImg2} alt="main " className={styles.home_img2} />
+          <img src={mainImg1} alt="main " className={styles.home_img1} />
+        </div>
 
-        <svg className={styles.rect} width="800px" height="1000px">
+        <svg className={styles.rect} width="1000px" height="1000px">
           <path
-            d="M0,0 H1000 V800 H0Z 
+            d="M 0 0 H1000 V800 H0Z 
             M 350 350
 m -300, 0
 a 300,300 0 1,0 600,0
@@ -56,6 +64,8 @@ a 300,300 0 1,0 -600,0
             fill="white"
           />
         </svg>
+        <img src={textImg1} alt="나만의" className={styles.home_text1} />
+        <img src={textImg2} alt="덱을" className={styles.home_text2} />
       </div>
     </div>
   );
