@@ -5,6 +5,8 @@ import mainImg2 from "../../image/home_img_2.png";
 import mainImg3 from "../../image/home_img_3.png";
 import textImg1 from "../../image/home_text_1.png";
 import textImg2 from "../../image/home_text_2.png";
+import textImg3 from "../../image/home_text_3.png";
+import textImg4 from "../../image/home_text_4.png";
 
 const MainHome = (props) => {
   return (
@@ -66,6 +68,8 @@ a 300,300 0 1,0 -600,0
         </svg>
         <img src={textImg1} alt="나만의" className={styles.home_text1} />
         <img src={textImg2} alt="덱을" className={styles.home_text2} />
+        <img src={textImg3} alt="나만의" className={styles.home_text3} />
+        <img src={textImg4} alt="계정에서" className={styles.home_text4} />
       </div>
     </div>
   );

@@ -32,10 +32,13 @@
   justify-content: space-between;
   padding: 0 5rem;
   font-family: var(--header-font-family);
+  border-bottom: 1px solid black;
+  background-color: black;
 }
 
 .header_title {
   font-size: 2rem;
+  color: white;
 }
 
 .login_button {
@@ -44,6 +47,7 @@
   height: 2rem;
   width: 4rem;
   text-align: center;
+  color: white;
   border: none;
   background: transparent;
   font-family: var(--header-font-family);
@@ -54,6 +58,7 @@
   width: 100%;
   height: 90%;
   position: relative;
+  border-bottom: 1px solid black;
 }
 
 .home_container > svg {
@@ -154,8 +159,26 @@
 .home_text2 {
   display: flex;
   position: absolute;
-  top: 7rem;
+  top: 10rem;
   right: 15rem;
+  animation: text-sliding-left 1s linear 1;
+  z-index: 200;
+}
+
+.home_text3 {
+  display: flex;
+  position: absolute;
+  bottom: 18rem;
+  left: 5rem;
+  animation: text-sliding-right 1s linear 1;
+  z-index: 200;
+}
+
+.home_text4 {
+  display: flex;
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
   animation: text-sliding-left 1s linear 1;
   z-index: 200;
 }
