@@ -5,12 +5,13 @@ import Login from "./components/login/login";
 import SignUp from "./components/login/signup";
 import Cards from "./components/cards/cards";
 import "./service/firebase";
+import MainHome from "./components/home/main_home";
 
 function App({ authService, cardRepository }) {
   return (
     <div className={styles.app}>
       <BrowserRouter>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={MainHome} />
         <Route
           exact
           path="/card"
