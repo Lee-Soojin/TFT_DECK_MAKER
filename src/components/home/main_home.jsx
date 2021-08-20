@@ -16,7 +16,12 @@ const MainHome = (props) => {
         <button className={styles.login_button}>LOGIN</button>
       </header>
       <div className={styles.home_container}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="700px" height="700px">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="700px"
+          height="700px"
+          className={styles.home_circle_container}
+        >
           <defs>
             <filter id="inset-shadow">
               <feOffset dx="10" dy="10" />
@@ -56,20 +61,33 @@ const MainHome = (props) => {
 
         <svg className={styles.rect} width="1000px" height="1000px">
           <path
-            d="M 0 0 H1000 V800 H0Z 
-            M 350 350
+            d="M 0 0 H1700 V800 H0Z 
+            M 862 419
 m -300, 0
 a 300,300 0 1,0 600,0
 a 300,300 0 1,0 -600,0
 
             "
-            fill="white"
+            fill="black"
           />
         </svg>
-        <img src={textImg1} alt="나만의" className={styles.home_text1} />
+        {/* <img src={textImg1} alt="나만의" className={styles.home_text1} />
         <img src={textImg2} alt="덱을" className={styles.home_text2} />
         <img src={textImg3} alt="나만의" className={styles.home_text3} />
-        <img src={textImg4} alt="계정에서" className={styles.home_text4} />
+        <img src={textImg4} alt="계정에서" className={styles.home_text4} /> */}
+        <div className={styles.home_text_container}>
+          <svg viewBox="0 0 800 800">
+            <circle cx="250" cy="150" r="100" fill="purple" />
+          </svg>
+          <h1 className={styles.home_text}>
+            나만의 <br />
+            덱을 만들고 <br />
+            나만의 공간에
+            <br />
+            저장해보세요
+          </h1>
+        </div>
+        <button className={styles.home_button_login}>시작하기</button>
       </div>
     </div>
   );
