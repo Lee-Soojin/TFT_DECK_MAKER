@@ -7,13 +7,25 @@ import textImg1 from "../../image/home_text_1.png";
 import textImg2 from "../../image/home_text_2.png";
 import textImg3 from "../../image/home_text_3.png";
 import textImg4 from "../../image/home_text_4.png";
+import { useHistory } from "react-router";
 
 const MainHome = (props) => {
+  const history = useHistory();
+
+  const handleGotoLogin = (event) => {
+    event.preventDefault();
+    history.push({
+      pathname: "/login",
+    });
+  };
+
   return (
     <div className={styles.home}>
       <header className={styles.header}>
         <h1 className={styles.header_title}>TFT DECK MAKER</h1>
-        <button className={styles.login_button}>LOGIN</button>
+        <button className={styles.login_button} onClick={handleGotoLogin}>
+          LOGIN
+        </button>
       </header>
       <div className={styles.home_container}>
         <svg
@@ -76,10 +88,10 @@ a 300,300 0 1,0 -600,0
         <img src={textImg3} alt="나만의" className={styles.home_text3} />
         <img src={textImg4} alt="계정에서" className={styles.home_text4} /> */}
         <div className={styles.home_text_container}>
-          <svg viewBox="0 0 800 800">
+          {/* <svg viewBox="0 0 800 800">
             <circle cx="250" cy="150" r="100" fill="purple" />
-          </svg>
-          <h1 className={styles.home_text}>
+          </svg> */}
+          <h1 className={styles.home_text1}>
             나만의 <br />
             덱을 만들고 <br />
             나만의 공간에
@@ -87,7 +99,15 @@ a 300,300 0 1,0 -600,0
             저장해보세요
           </h1>
         </div>
-        <button className={styles.home_button_login}>시작하기</button>
+        <button className={styles.home_button_login} onClick={handleGotoLogin}>
+          시작하기
+        </button>
+        <h1 className={styles.home_text2}>
+          나만의 <br />
+          덱 메이커로 <br />
+          게임에서 <br />
+          승리하세요 !
+        </h1>
       </div>
     </div>
   );
