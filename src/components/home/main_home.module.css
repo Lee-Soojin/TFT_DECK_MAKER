@@ -51,6 +51,7 @@
   color: white;
   border: none;
   background: transparent;
+  font-size: 1.2rem;
   font-family: var(--header-font-family);
 }
 
@@ -58,8 +59,10 @@
   border-radius: 50%;
   width: 7rem;
   height: 7rem;
-  transform: scale(2);
-  background-color: skyblue;
+  transform: scale(1.5);
+  background-color: #ffff56;
+  color: black;
+  font-weight: 700;
   z-index: 200;
 }
 
@@ -172,7 +175,7 @@
 
 .home_text2 {
   position: absolute;
-  right: 8rem;
+  right: 9rem;
   top: 3rem;
   font-size: 4rem;
   color: white;

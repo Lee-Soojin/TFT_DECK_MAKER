@@ -1,6 +1,8 @@
 :root {
   --header-title-font-family: "Y_Spotlight";
   --header-button-font-family: "Y_Spotlight";
+  --brShadow: -6px 6px 15px rgba(0, 0, 0, 0.5);
+  --tlShadow: 6px -6px 15px rgba(255, 255, 255, 0.8);
 }
 
 @font-face {
@@ -23,6 +25,7 @@
   height: 8rem;
   line-height: 8rem;
   background-color: transparent;
+  background-color: #e0e5eb59;
   font-size: 16px;
   box-shadow: 4px 4px 8px lightgray;
 }
@@ -36,10 +39,13 @@
 }
 
 .header_title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: var(--header-title-font-family);
   align-items: center;
   margin: 1rem auto;
+  color: white;
+  text-shadow: -5px -5px 9px rgba(71, 71, 71, 0.466),
+    5px 5px 9px rgba(0, 0, 0, 0.08);
 }
 
 .about {

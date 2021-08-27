@@ -15,6 +15,7 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #e0e5eb;
 }
 
 .card_board {
@@ -25,7 +26,7 @@
   height: 100%;
   overflow-y: auto;
   margin: 0 auto;
-  margin-top: 0.9rem;
+  margin-top: 2rem;
 }
 
 .header {
