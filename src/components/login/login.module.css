@@ -157,6 +157,7 @@
   text-align: center;
   transition: all 100ms ease;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .BtnGoogleLogin:hover,

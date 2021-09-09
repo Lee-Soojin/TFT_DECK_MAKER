@@ -28,7 +28,7 @@ const MainHome = (props) => {
         </button>
       </header>
       <div className={styles.home_container}>
-        <svg
+        {/* <svg
           xmlns="http://www.w3.org/2000/svg"
           width="700px"
           height="700px"
@@ -64,14 +64,14 @@ const MainHome = (props) => {
             fill="#12005e"
             filter="url(#inset-shadow)"
           />
-        </svg>
+        </svg> */}
         <div className={styles.home_image_container}>
           <img src={mainImg3} alt="main " className={styles.home_img3} />
           <img src={mainImg2} alt="main " className={styles.home_img2} />
           <img src={mainImg1} alt="main " className={styles.home_img1} />
         </div>
 
-        <svg className={styles.rect} width="1000px" height="1000px">
+        {/* <svg className={styles.rect} width="1700px" height="800px">
           <path
             d="M 0 0 H1700 V800 H0Z 
             M 862 419
@@ -82,32 +82,25 @@ a 300,300 0 1,0 -600,0
             "
             fill="black"
           />
-        </svg>
-        {/* <img src={textImg1} alt="나만의" className={styles.home_text1} />
-        <img src={textImg2} alt="덱을" className={styles.home_text2} />
-        <img src={textImg3} alt="나만의" className={styles.home_text3} />
-        <img src={textImg4} alt="계정에서" className={styles.home_text4} /> */}
+        </svg> */}
         <div className={styles.home_text_container}>
-          {/* <svg viewBox="0 0 800 800">
-            <circle cx="250" cy="150" r="100" fill="purple" />
-          </svg> */}
-          <h1 className={styles.home_text1}>
+          <p className={styles.home_text1}>
             나만의 <br />
             덱을 만들고 <br />
             나만의 공간에
             <br />
             저장해보세요
-          </h1>
+          </p>
+          <p className={styles.home_text2}>
+            나만의 <br />
+            덱 메이커로 <br />
+            게임에서 <br />
+            승리하세요 !
+          </p>
         </div>
         <button className={styles.home_button_login} onClick={handleGotoLogin}>
           시작하기
         </button>
-        <h1 className={styles.home_text2}>
-          나만의 <br />
-          덱 메이커로 <br />
-          게임에서 <br />
-          승리하세요 !
-        </h1>
       </div>
     </div>
   );

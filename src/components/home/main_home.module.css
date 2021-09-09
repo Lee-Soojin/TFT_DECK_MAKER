@@ -22,6 +22,7 @@
   height: 100vh;
   font-size: 16px;
   background-color: black;
+  position: relative;
 }
 
 .header {
@@ -34,7 +35,7 @@
   padding: 0 5rem;
   font-family: var(--header-font-family);
   border-bottom: 1px solid black;
-  background-color: black;
+  background-color: transparent;
 }
 
 .header_title {
@@ -72,6 +73,9 @@
   height: 90%;
   position: relative;
   border-bottom: 1px solid black;
+  background: url(../../image/home_background_black.jpg);
+  background-position: center;
+  background-size: cover;
 }
 
 .home_circle_container {
@@ -81,8 +85,9 @@
 }
 
 .rect {
-  height: 700px;
+  height: 100vh;
   width: 100%;
+  z-index: 1;
 }
 
 .upper_circle_container {
@@ -139,7 +144,7 @@
 
 .home_img3 {
   opacity: 1;
-  animation: showImg 5s;
+  animation: stayImg 5s;
   animation-delay: 8s;
   -webkit-transition: -webkit-transform 0.3s 0.2s ease-in-out;
   -moz-transition: -moz-transform 0.3s 0.2s ease-in-out;
@@ -156,31 +161,33 @@
 
 .home_text_container {
   display: flex;
-  position: absolute;
-  bottom: 0rem;
-  left: 1rem;
-  width: 40%;
-  height: 60%;
-  animation: sliding-right 1s linear 1;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .home_text1 {
+  display: flex;
+  z-index: 3;
   position: absolute;
-  left: 9rem;
-  bottom: 5rem;
-  font-size: 4rem;
   color: white;
+  left: 5rem;
+  bottom: 5rem;
   font-family: var(--home-text-font-family);
+  font-size: 3rem;
+  animation: text-sliding-right 2s ease;
 }
 
 .home_text2 {
+  display: flex;
+  z-index: 3;
   position: absolute;
-  right: 9rem;
-  top: 3rem;
-  font-size: 4rem;
+  right: 5rem;
+  top: 5rem;
   color: white;
   font-family: var(--home-text-font-family);
-  animation: text-sliding-left 1s linear 1;
+  font-size: 3rem;
+  animation: text-sliding-left 2s ease;
 }
 
 .home_button_login {
@@ -191,20 +198,20 @@
   font-family: var(--home-text-font-family);
   font-size: 1.2rem;
   color: white;
-  background-color: rgba(105, 90, 205, 0.473);
+  background-color: rgba(42, 13, 230, 0.473);
   position: absolute;
-  right: 35rem;
-  bottom: 10rem;
-  border-radius: 50%;
+  right: 11rem;
+  bottom: 18rem;
+  border-radius: 2rem;
   width: 10rem;
-  height: 10rem;
+  height: 4rem;
   border: none;
-  box-shadow: 4px 4px 5px darkmagenta, -2px -2px 2px darkmagenta;
   cursor: pointer;
   transition: all 0.1s ease;
+  z-index: 2;
 }
 
-.home_button_login :hover {
+.home_button_login:hover {
   transform: scale(1.1);
 }
 
@@ -238,9 +245,9 @@
   }
 }
 
-@keyframes sliding-right {
+@keyframes text-sliding-right {
   from {
-    transform: translateX(-10%);
+    transform: translateX(-20%);
   }
   to {
     transform: translateX(0%);
@@ -249,7 +256,7 @@
 
 @keyframes text-sliding-left {
   from {
-    transform: translateX(10%);
+    transform: translateX(20%);
   }
   to {
     transform: translateX(0%);
