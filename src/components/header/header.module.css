@@ -89,3 +89,29 @@
 .BtnLogout:hover {
   transform: scale(1.1);
 }
+
+@media screen and (max-width: 415px) {
+  .header_title {
+    font-size: 2rem;
+  }
+
+  .about {
+    margin-left: 1.5em;
+    margin-top: 2em;
+  }
+
+  .link_about {
+    font-size: 0.8rem;
+    margin-left: 0;
+    border-bottom: 1px solid black;
+  }
+
+  .BtnLogout {
+    font-size: 0.8rem;
+    right: 1.5em;
+    top: 4.5em;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+    width: 3.5rem;
+  }
+}

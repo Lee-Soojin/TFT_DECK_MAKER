@@ -662,6 +662,10 @@ const AddForm = memo(({ onAdd }) => {
           <option placeholder="judge">judge</option>
           <option placeholder="cartel">cartel</option>
           <option placeholder="space">space</option>
+          <option value="galaxy">galaxy</option>
+          <option value="saved">saved</option>
+          <option value="light">light</option>
+          <option value="regenerative">regenerative</option>
         </select>
       </div>
       <div className={styles.deck}>

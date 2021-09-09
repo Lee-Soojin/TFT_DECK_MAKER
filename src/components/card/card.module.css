@@ -44,22 +44,24 @@ li {
 
 .card.space {
   display: flex;
-  background: url(../../image/card_background_space.jpg) center;
-  font-family: var(--card-title-font-family);
+  background: url(../../image/card_background_space.jpg) center center / cover
+    no-repeat;
   text-shadow: 1px 1px 2px rgb(36, 61, 71);
   color: black;
 }
 
 .card.judge {
   display: flex;
-  background: url(../../image/card_background_judge_black.jpg) center;
+  background: url(../../image/card_background_judge_black.jpg) center center /
+    cover no-repeat;
   color: white;
   font-family: var(--card-title-font-family);
 }
 
 .card.cartel {
   display: flex;
-  background: url(../../image/card_background_cartel.jpg) center;
+  background: url(../../image/card_background_cartel.jpg) center center / cover
+    no-repeat;
   font-family: var(--card-title-font-family);
   color: rgb(228, 198, 225);
   text-shadow: 1px 1px 2px black;
@@ -67,27 +69,28 @@ li {
 
 .card.galaxy {
   display: flex;
-  background: url(../../image/theme/galaxy.jpg) center;
+  background: url(../../image/theme/galaxy.jpg) center center / cover no-repeat;
   color: white;
 }
 
 .card.saved {
   display: flex;
-  background: url(../../image/theme/saved.jpg) center;
+  background: url(../../image/theme/saved.jpg) center center / cover no-repeat;
   background-position: center;
   color: black;
 }
 
 .card.light {
   display: flex;
-  background: url(../../image/theme/light.jpg) center;
+  background: url(../../image/theme/light.jpg) center center / cover no-repeat;
   background-position: center;
   color: black;
 }
 
 .card.regenerative {
   display: flex;
-  background: url(../../image/theme/regenerative.jpg) center;
+  background: url(../../image/theme/regenerative.jpg) center center / cover
+    no-repeat;
   background-position: center;
   color: black;
 }
@@ -103,6 +106,13 @@ li {
   font-family: var(--card-title-font-family);
   margin: 0;
   font-size: 0.8rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 .item {
@@ -142,7 +152,8 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   margin: 0.3rem;
   padding: 0.3rem 0;
   border-bottom: 1.5px solid rgba(208, 207, 214, 0.678);
@@ -153,7 +164,8 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  width: 100%;
+  max-width: 100%;
+  width: auto;
   margin: 0.3rem;
   padding-bottom: 0.3rem;
   border-bottom: 1.5px solid rgba(208, 207, 214, 0.678);
@@ -163,4 +175,40 @@ li {
   width: 2rem;
   height: 2rem;
   margin: 0.3rem;
+}
+
+@media screen and (max-width: 415px) {
+  .card {
+    width: 24rem;
+    height: 12rem;
+    background-repeat: no-repeat;
+  }
+
+  .card_name {
+    font-size: 1rem;
+  }
+
+  .deck1,
+  .deck2 {
+    font-size: 0.6rem;
+  }
+
+  .item {
+    width: 100%;
+    height: auto;
+  }
+
+  .champion_list {
+    margin: 0;
+  }
+
+  .champion_list > div > img {
+    width: 2rem;
+    height: auto;
+    margin: 0;
+  }
+
+  .champion_list > div > p {
+    font-size: 0.4rem;
+  }
 }

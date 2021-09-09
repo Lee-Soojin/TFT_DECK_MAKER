@@ -245,3 +245,91 @@ select {
     margin-right: 1rem;
   }
 }
+
+@media screen and (max-width: 670px) {
+  .form {
+    height: 30rem;
+  }
+
+  .card_name {
+    margin: 0.9rem 1rem;
+  }
+
+  .theme {
+    margin: 0.9rem 1rem;
+  }
+
+  .deck {
+    margin: 0.9rem 1rem;
+  }
+
+  .champion {
+    margin: 0.5rem;
+    width: 35%;
+  }
+
+  .item {
+    margin: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .form {
+    width: 95%;
+  }
+
+  .card_name,
+  .theme,
+  .deck {
+    margin: 1rem 1.3rem;
+  }
+
+  .champion {
+    margin: 1rem;
+    width: 30%;
+  }
+
+  .item {
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .form {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+  }
+  .cardname_input {
+    width: 6rem;
+  }
+
+  .card_name {
+    width: 40%;
+    height: 7rem;
+    margin: 0;
+  }
+
+  .theme {
+    width: 40%;
+    height: 7rem;
+    margin: 0;
+  }
+
+  .deck {
+    margin: 0;
+    width: 40%;
+  }
+
+  .champion {
+    width: 40%;
+    margin: 0;
+    height: 40%;
+  }
+
+  .item {
+    width: 40%;
+    margin: 0;
+    height: 50%;
+  }
+}

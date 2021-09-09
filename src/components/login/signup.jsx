@@ -52,6 +52,7 @@ function SignUp({ authService }) {
                 value={email}
                 onChange={handleChange}
                 className={styles.input_email}
+                autocomplete="off"
               />
             </div>
             <div className={styles.password}>
@@ -62,6 +63,7 @@ function SignUp({ authService }) {
                 value={password}
                 onChange={handleChange}
                 className={styles.input_password}
+                autocomplete="off"
               />
             </div>
             <button

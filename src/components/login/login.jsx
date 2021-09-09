@@ -80,6 +80,7 @@ const Login = ({ authService }) => {
                 value={password}
                 onChange={handleChange}
                 className={styles.input_password}
+                autocomplete="off"
               />
             </div>
             <button className={styles.BtnLogin} type="submit">

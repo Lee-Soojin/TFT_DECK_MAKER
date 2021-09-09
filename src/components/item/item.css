@@ -13,6 +13,21 @@
   margin: 0;
 }
 
+.Item_Container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.Item_Container::-webkit-scrollbar-thumb {
+  background-color: blueviolet;
+  box-shadow: 2px 2px 3px gray;
+  border-radius: 1rem;
+}
+
+.Item_Container::-webkit-scrollbar-track {
+  width: 10px;
+  background-color: white;
+}
+
 .Item_Container.visible {
   opacity: 1;
   visibility: visible;
