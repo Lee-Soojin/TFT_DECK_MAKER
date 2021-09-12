@@ -4,6 +4,7 @@ import Header from "../header/header";
 import CardMaker from "../card_maker/card_maker";
 import CardContainer from "../card_container/card_container";
 import { useHistory } from "react-router";
+import { BsMoon } from "react-icons/bs";
 
 const Cards = ({ authService, cardRepository }) => {
   const History = useHistory();
@@ -72,6 +73,9 @@ const Cards = ({ authService, cardRepository }) => {
           <CardContainer cards={cards} />
         </div>
       </div>
+      <button className={styles.BtnDarkMode}>
+        <BsMoon />
+      </button>
     </div>
   );
 };

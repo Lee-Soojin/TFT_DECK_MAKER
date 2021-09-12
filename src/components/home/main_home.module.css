@@ -67,12 +67,12 @@
 .home_container {
   display: flex;
   width: 100%;
-  height: 90%;
+  height: 100%;
+
   position: relative;
   border-bottom: 1px solid black;
-  background: url(../../image/home_background_black.jpg);
-  background-position: center;
-  background-size: cover;
+  background: url(../../image/home_background_black.jpg) center center / cover
+    no-repeat;
 }
 
 .home_circle_container {
@@ -301,5 +301,117 @@
     -moz-transform: translateX(0%);
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .home_img1,
+  .home_img2,
+  .home_img3 {
+    left: 25%;
+    height: 35rem;
+  }
+
+  .home_text1 {
+    left: 5%;
+    font-size: 2.5rem;
+    bottom: 20%;
+  }
+
+  .home_text2 {
+    right: 5%;
+    font-size: 2.5rem;
+    top: 20%;
+  }
+
+  .home_button_login {
+    right: 7%;
+    bottom: 35%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .home_img1,
+  .home_img2,
+  .home_img3 {
+    left: 15%;
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .header {
+    padding: 0 2rem;
+  }
+
+  .home_text1,
+  .home_text2 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .home_text1,
+  .home_text2 {
+    font-size: 1.2rem;
+  }
+
+  .home_img1,
+  .home_img2,
+  .home_img3 {
+    left: 15%;
+    bottom: 28%;
+    height: 22rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header {
+    padding: 0.5rem 1rem;
+  }
+
+  .header_title {
+    font-size: 1rem;
+  }
+
+  .home_img1,
+  .home_img2,
+  .home_img3 {
+    left: 10%;
+    top: 20%;
+    height: 20rem;
+  }
+
+  .home_text1,
+  .home_text2 {
+    font-size: 1.5rem;
+  }
+
+  .home_text1 {
+    bottom: 20%;
+  }
+
+  .home_button_login {
+    right: 35%;
+    width: 7rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    top: 10%;
+    background-color: blue;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .home_img1,
+  .home_img2,
+  .home_img3 {
+    left: 15%;
+    top: 10%;
+    height: 15rem;
+  }
+
+  .home_text1,
+  .home_text2 {
+    font-size: 1.1rem;
   }
 }
