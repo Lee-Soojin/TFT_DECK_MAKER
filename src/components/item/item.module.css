@@ -43,6 +43,10 @@
   font-family: var(--item-title-font-family);
 }
 
+.item_select_title.dark {
+  color: white;
+}
+
 .BtnShow_item_list {
   background-color: transparent;
   border: none;

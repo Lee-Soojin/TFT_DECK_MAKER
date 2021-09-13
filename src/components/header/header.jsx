@@ -2,9 +2,11 @@ import React, { memo } from "react";
 import styles from "./header.module.css";
 import { Link } from "react-router-dom";
 
-const Header = memo(({ onLogout }) => {
+const Header = memo(({ onLogout, darkmode }) => {
   return (
-    <section className={styles.header}>
+    <section
+      className={`${styles.header} ${darkmode ? styles.dark : styles.light}`}
+    >
       <div className={styles.about}>
         <Link to="/" className={styles.link_about}>
           About

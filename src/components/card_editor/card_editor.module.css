@@ -42,6 +42,11 @@
   font-size: 16px;
 }
 
+.form.dark {
+  box-shadow: none;
+  border: 1px solid white;
+}
+
 .card_name {
   display: flex;
   position: relative;
@@ -58,9 +63,16 @@
   font-family: var(--title-font-family);
 }
 
+.form.dark > .card_name {
+}
+
 .name_title {
   font-size: 0.8rem;
   font-family: var(--title-font-family);
+}
+
+.form.dark > .card_name > .name_title {
+  color: white;
 }
 
 .BtnInsert {
@@ -103,6 +115,10 @@
 .theme_title {
   font-size: 0.8rem;
   font-family: var(--title-font-family);
+}
+
+.form.dark > .theme > .theme_title {
+  color: white;
 }
 
 .theme_select {
@@ -258,6 +274,36 @@
 .BtnDelete:hover {
   transform: scale(0.95);
   color: var(--delete-button-hover-color);
+}
+
+.form.dark > div > p {
+  color: white;
+}
+
+.form.dark > div > div > p {
+  color: white;
+}
+
+.form.dark > div > input {
+  box-shadow: none;
+  background-color: white;
+}
+
+.form.dark > div > select,
+.form.dark > div > div > select {
+  box-shadow: none;
+  background-color: white;
+}
+
+.form.dark > div > .champion_container {
+  border: 1px solid white;
+}
+
+.form.dark > .item,
+.form.dark > .champion {
+  background-color: black;
+  box-shadow: none;
+  border: 1px solid white;
 }
 
 @media screen and (max-width: 670px) {

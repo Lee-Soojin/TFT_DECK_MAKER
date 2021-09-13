@@ -11,6 +11,7 @@ const Cards = ({ authService, cardRepository }) => {
   const historyState = History?.location?.state;
   const [cards, setCards] = useState({});
   const [userId, setUserId] = useState(historyState && historyState.id);
+  const [darkmode, setDarkmode] = useState(false);
 
   const history = useHistory();
   const onLogout = useCallback(() => {
@@ -55,10 +56,15 @@ const Cards = ({ authService, cardRepository }) => {
     cardRepository.removeCard(userId, card);
   };
 
+  const handleDarkMode = (event) => {
+    event.preventDefault();
+    setDarkmode(!darkmode);
+  };
+
   return (
-    <div className={styles.card}>
+    <div className={`${styles.card} ${darkmode ? styles.dark : styles.light}`}>
       <div className={styles.header}>
-        <Header onLogout={onLogout} />
+        <Header onLogout={onLogout} darkmode={darkmode} />
       </div>
       <div className={styles.card_board}>
         <div className={styles.card_maker}>
@@ -67,13 +73,14 @@ const Cards = ({ authService, cardRepository }) => {
             addCard={createOrUpdateCard}
             updateCard={createOrUpdateCard}
             deleteCard={deleteCard}
+            darkmode={darkmode}
           />
         </div>
         <div className={styles.card_container}>
-          <CardContainer cards={cards} />
+          <CardContainer cards={cards} darkmode={darkmode} />
         </div>
       </div>
-      <button className={styles.BtnDarkMode}>
+      <button className={styles.BtnDarkMode} onClick={handleDarkMode}>
         <BsMoon />
       </button>
     </div>

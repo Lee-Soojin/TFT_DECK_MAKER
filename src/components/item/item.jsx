@@ -3,7 +3,7 @@ import "./item.css";
 import React, { useState } from "react";
 import { FaCaretSquareDown } from "react-icons/fa";
 
-const Item = ({ items, onChange }) => {
+const Item = ({ items, onChange, darkmode }) => {
   const [visibility, setVisibility] = useState(false);
   const [selectedItem, setSelectedItem] = useState([]);
   const handleClick = (e) => {
@@ -52,7 +52,13 @@ const Item = ({ items, onChange }) => {
           ))}
       </div>
       <div className={styles.selected_item_container}>
-        <p className={styles.item_select_title}>선택된 아이템</p>
+        <p
+          className={`${styles.item_select_title} ${
+            darkmode ? styles.dark : styles.light
+          }`}
+        >
+          선택된 아이템
+        </p>
         <div className={styles.selected_item_list}>
           {selectedItem &&
             selectedItem.map((Item) => (

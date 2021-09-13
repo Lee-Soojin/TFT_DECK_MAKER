@@ -209,6 +209,30 @@ select {
   transform: scale(1.1);
 }
 
+.form.dark {
+  box-shadow: none;
+  border: 1px solid white;
+  background-color: transparent;
+}
+
+.form.dark > div > div > p,
+.form.dark > div > p {
+  color: white;
+}
+
+.form.dark > .BtnAdd {
+  box-shadow: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.form.dark > div > select,
+.form.dark > div > div > select,
+.form.dark > .cardname_input {
+  background-color: white;
+  box-shadow: none;
+}
+
 @media screen and (max-width: 80rem) {
   .cardname_input {
     width: 7rem;

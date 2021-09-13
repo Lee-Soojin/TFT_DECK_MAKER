@@ -2,13 +2,12 @@ import React, { useRef } from "react";
 import styles from "./card_editor.module.css";
 import { TiDelete } from "react-icons/ti";
 
-const CardEditor = ({ card, updateCard, deleteCard }) => {
+const CardEditor = ({ card, updateCard, deleteCard, darkmode }) => {
   const { name, cham, item, deck1, deck2, theme } = card;
   const nameRef = useRef();
   const themeRef = useRef();
   const deck1Ref = useRef();
   const deck2Ref = useRef();
-  console.log(cham);
 
   const onChange = (event) => {
     if (event.currentTarget == null) {
@@ -27,7 +26,9 @@ const CardEditor = ({ card, updateCard, deleteCard }) => {
 
   return (
     <>
-      <form className={styles.form}>
+      <form
+        className={`${styles.form} ${darkmode ? styles.dark : styles.light}`}
+      >
         <div className={styles.card_name}>
           <p className={styles.name_title}>카드 이름</p>
           <input

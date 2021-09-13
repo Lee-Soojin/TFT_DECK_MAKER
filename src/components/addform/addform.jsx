@@ -4,7 +4,7 @@ import Item from "../item/item.jsx";
 import SelectChampion from "../select_champion/select_champion";
 import { FaFolderPlus } from "react-icons/fa";
 
-const AddForm = memo(({ onAdd }) => {
+const AddForm = memo(({ onAdd, darkmode }) => {
   const [cham, setCham] = useState([]);
   const [item, setItem] = useState([]);
   const chamOptions = [
@@ -641,7 +641,10 @@ const AddForm = memo(({ onAdd }) => {
   };
 
   return (
-    <form ref={formRef} className={styles.form}>
+    <form
+      ref={formRef}
+      className={`${styles.form} ${darkmode ? styles.dark : styles.light}`}
+    >
       <div className={styles.card_name}>
         <p className={styles.name_title}>카드 이름</p>
         <input
@@ -750,7 +753,7 @@ const AddForm = memo(({ onAdd }) => {
         />
       </div>
       <div className={styles.item}>
-        <Item items={items} onChange={handleItem} />
+        <Item items={items} onChange={handleItem} darkmode={darkmode} />
       </div>
       <button className={styles.BtnAdd} onClick={onSubmit}>
         <FaFolderPlus />
