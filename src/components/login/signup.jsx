@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "./signup.module.css";
-import SignUpImage from "../../image/tft_sign_up1_size.jpg";
+import SignUpImage from "../../image/signup_img.png";
 
 function SignUp({ authService }) {
   const [email, setEmail] = useState("");
@@ -78,8 +78,12 @@ function SignUp({ authService }) {
             이미 회원이신가요? <Link to="/login">로그인</Link>
           </p>
         </div>
-        <div className={styles.SignUpImage}>
-          <img src={SignUpImage} alt="image_sign_up" />
+        <div className={styles.signup_image_container}>
+          <img
+            src={SignUpImage}
+            alt="image_sign_up"
+            className={styles.signup_img}
+          />
         </div>
       </div>
     </div>
