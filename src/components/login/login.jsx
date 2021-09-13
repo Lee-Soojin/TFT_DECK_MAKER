@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import styles from "./login.module.css";
-import LoginImg from "../../image/tft.png";
+import LoginImg from "../../image/login_image.png";
 import { SiRiotgames } from "react-icons/si";
 import { FcGoogle } from "react-icons/fc";
 import { SiGithub } from "react-icons/si";
@@ -109,8 +109,8 @@ const Login = ({ authService }) => {
             </button>
           </div>
         </div>
-        <div className={styles.LoginImage}>
-          <img src={LoginImg} alt="Login_image" />
+        <div className={styles.login_image_container}>
+          <img src={LoginImg} alt="Login_image" className={styles.login_img} />
         </div>
       </div>
     </div>
